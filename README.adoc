@@ -1,5 +1,7 @@
 = PUM - Pico USB MIDI library
 
+image:https://github.com/AkiyukiOkayasu/pum/actions/workflows/cmake.yml/badge.svg[UnitTest] image:https://github.com/AkiyukiOkayasu/pum/actions/workflows/doxygen.yml/badge.svg[link=https://akiyukiokayasu.github.io/ame/] image:https://img.shields.io/github/v/release/AkiyukiOkayasu/pum[link=https://github.com/AkiyukiOkayasu/ame/releases/latest] image:https://img.shields.io/github/license/AkiyukiOkayasu/pum[link=LICENSE] 
+
 PUM is a C++ header-only library for USB-MIDI. +
 
 == Dependencies
