@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include "pum_Types.hpp"
+#include "pum_Constants.hpp"
 
 #include <cassert>
 #include <cstdint>
