@@ -46,8 +46,6 @@ var namespaces_dup =
       [ "Parser", "classpum_1_1_parser.html", "classpum_1_1_parser" ],
       [ "UsbMidiEventPacket", "structpum_1_1_usb_midi_event_packet.html", "structpum_1_1_usb_midi_event_packet" ],
       [ "Note", "structpum_1_1_note.html", "structpum_1_1_note" ],
-      [ "ControlChange", "structpum_1_1_control_change.html", "structpum_1_1_control_change" ],
-      [ "makeNoteOff", "pum___generator_8hpp.html#abd2af23723513d7496a42001cde8341e", null ],
-      [ "makeNoteOn", "pum___generator_8hpp.html#af5dc1ad7000a096f67e271577d5540d3", null ]
+      [ "ControlChange", "structpum_1_1_control_change.html", "structpum_1_1_control_change" ]
     ] ]
 ];

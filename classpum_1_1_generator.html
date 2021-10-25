@@ -92,11 +92,169 @@ $(document).ready(function(){initNavTree('classpum_1_1_generator.html',''); init
 
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classpum_1_1_generator-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">pum::Generator Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>USB-MIDI packet generator.  
+ <a href="classpum_1_1_generator.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="pum___generator_8hpp_source.html">pum_Generator.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a607a32f8d02f48236b4bd81c2f564451"><td class="memItemLeft" align="right" valign="top"><a id="a607a32f8d02f48236b4bd81c2f564451"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Generator</b> (const uint8_t channel, const uint8_t cableNumber)</td></tr>
+<tr class="separator:a607a32f8d02f48236b4bd81c2f564451"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cc19257a20d4acbe0e8c187f3e8e372"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpum_1_1_generator.html#a6cc19257a20d4acbe0e8c187f3e8e372">setChannel</a> (const uint8_t newMIDIChannel)</td></tr>
+<tr class="memdesc:a6cc19257a20d4acbe0e8c187f3e8e372"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set MIDI channel.  <a href="classpum_1_1_generator.html#a6cc19257a20d4acbe0e8c187f3e8e372">More...</a><br /></td></tr>
+<tr class="separator:a6cc19257a20d4acbe0e8c187f3e8e372"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bbdfc4626bc1d2733ababcdffbe3c42"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpum_1_1_generator.html#a8bbdfc4626bc1d2733ababcdffbe3c42">makeNoteOn</a> (uint8_t packet[4], const uint8_t noteNumber, const uint8_t velocity)</td></tr>
+<tr class="memdesc:a8bbdfc4626bc1d2733ababcdffbe3c42"><td class="mdescLeft">&#160;</td><td class="mdescRight">MIDI note ON.  <a href="classpum_1_1_generator.html#a8bbdfc4626bc1d2733ababcdffbe3c42">More...</a><br /></td></tr>
+<tr class="separator:a8bbdfc4626bc1d2733ababcdffbe3c42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20f66085aafba4bf41c5ac8b43eae715"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpum_1_1_generator.html#a20f66085aafba4bf41c5ac8b43eae715">makeNoteOff</a> (uint8_t packet[4], const uint8_t noteNumber)</td></tr>
+<tr class="memdesc:a20f66085aafba4bf41c5ac8b43eae715"><td class="mdescLeft">&#160;</td><td class="mdescRight">MIDI note OFF.  <a href="classpum_1_1_generator.html#a20f66085aafba4bf41c5ac8b43eae715">More...</a><br /></td></tr>
+<tr class="separator:a20f66085aafba4bf41c5ac8b43eae715"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>USB-MIDI packet generator. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a20f66085aafba4bf41c5ac8b43eae715"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20f66085aafba4bf41c5ac8b43eae715">&#9670;&nbsp;</a></span>makeNoteOff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pum::Generator::makeNoteOff </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>packet</em>[4], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>noteNumber</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>MIDI note OFF. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">packet</td><td></td></tr>
+    <tr><td class="paramname">noteNumber</td><td>[0, 127] </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>&lt; velocity 0</p>
+
+</div>
+</div>
+<a id="a8bbdfc4626bc1d2733ababcdffbe3c42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bbdfc4626bc1d2733ababcdffbe3c42">&#9670;&nbsp;</a></span>makeNoteOn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pum::Generator::makeNoteOn </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>packet</em>[4], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>noteNumber</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>velocity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>MIDI note ON. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">packet</td><td></td></tr>
+    <tr><td class="paramname">noteNumber</td><td>[0, 127] </td></tr>
+    <tr><td class="paramname">velocity</td><td>[0, 127] </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6cc19257a20d4acbe0e8c187f3e8e372"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cc19257a20d4acbe0e8c187f3e8e372">&#9670;&nbsp;</a></span>setChannel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pum::Generator::setChannel </td>
+          <td>(</td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>newMIDIChannel</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set MIDI channel. </p>
+<p><br  />
+ </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newMIDIChannel</td><td>[0, 15] </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/<a class="el" href="pum___generator_8hpp_source.html">pum_Generator.hpp</a></li>
 </ul>

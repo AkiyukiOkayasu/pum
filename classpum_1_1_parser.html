@@ -93,6 +93,7 @@ $(document).ready(function(){initNavTree('classpum_1_1_parser.html',''); initRes
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="classpum_1_1_parser-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">pum::Parser Class Reference</div>  </div>
@@ -101,44 +102,123 @@ $(document).ready(function(){initNavTree('classpum_1_1_parser.html',''); initRes
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a87a37d87a621a4a142b4ae4be11eb72b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpum_1_1_parser.html#a87a37d87a621a4a142b4ae4be11eb72b">parse</a> (const uint8_t(&amp;packet)[4])</td></tr>
-<tr class="memdesc:a87a37d87a621a4a142b4ae4be11eb72b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse MIDI packet <br  />
-  <a href="classpum_1_1_parser.html#a87a37d87a621a4a142b4ae4be11eb72b">More...</a><br /></td></tr>
-<tr class="separator:a87a37d87a621a4a142b4ae4be11eb72b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c130cbb98e74479a4eceefcc346e3e4"><td class="memItemLeft" align="right" valign="top"><a id="a2c130cbb98e74479a4eceefcc346e3e4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>parse</b> (const uint8_t packet[4])</td></tr>
+<tr class="separator:a2c130cbb98e74479a4eceefcc346e3e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a612bdacacff7c96851307211ec5f4489"><td class="memItemLeft" align="right" valign="top">std::function&lt; void(<a class="el" href="structpum_1_1_note.html">Note</a>)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpum_1_1_parser.html#a612bdacacff7c96851307211ec5f4489">onNoteOn</a></td></tr>
+<tr class="memdesc:a612bdacacff7c96851307211ec5f4489"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structpum_1_1_note.html" title="MIDI note.">Note</a> on callback.  <a href="classpum_1_1_parser.html#a612bdacacff7c96851307211ec5f4489">More...</a><br /></td></tr>
+<tr class="separator:a612bdacacff7c96851307211ec5f4489"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17a0d2678dd433cea413637e13d81e00"><td class="memItemLeft" align="right" valign="top">std::function&lt; void(<a class="el" href="structpum_1_1_note.html">Note</a>)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpum_1_1_parser.html#a17a0d2678dd433cea413637e13d81e00">onNoteOff</a></td></tr>
+<tr class="memdesc:a17a0d2678dd433cea413637e13d81e00"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structpum_1_1_note.html" title="MIDI note.">Note</a> off callback.  <a href="classpum_1_1_parser.html#a17a0d2678dd433cea413637e13d81e00">More...</a><br /></td></tr>
+<tr class="separator:a17a0d2678dd433cea413637e13d81e00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba2366fdd02192126fd9aa85e6a56a0e"><td class="memItemLeft" align="right" valign="top">std::function&lt; void(<a class="el" href="structpum_1_1_control_change.html">ControlChange</a>)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpum_1_1_parser.html#aba2366fdd02192126fd9aa85e6a56a0e">onControlChange</a></td></tr>
+<tr class="memdesc:aba2366fdd02192126fd9aa85e6a56a0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Control change callback.  <a href="classpum_1_1_parser.html#aba2366fdd02192126fd9aa85e6a56a0e">More...</a><br /></td></tr>
+<tr class="separator:aba2366fdd02192126fd9aa85e6a56a0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89964c6a9aa36eaa59b28c5f531f2eb7"><td class="memItemLeft" align="right" valign="top">std::function&lt; void(const uint8_t[], const uint8_t)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpum_1_1_parser.html#a89964c6a9aa36eaa59b28c5f531f2eb7">onSysEx</a></td></tr>
+<tr class="memdesc:a89964c6a9aa36eaa59b28c5f531f2eb7"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="namespacepum_1_1_sys_ex.html" title="MIDI SysEx.">SysEx</a> callback.  <a href="classpum_1_1_parser.html#a89964c6a9aa36eaa59b28c5f531f2eb7">More...</a><br /></td></tr>
+<tr class="separator:a89964c6a9aa36eaa59b28c5f531f2eb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d372040416595953c44504b7f71b622"><td class="memItemLeft" align="right" valign="top">std::function&lt; void(uint8_t byte)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpum_1_1_parser.html#a4d372040416595953c44504b7f71b622">onSystemRealtime</a></td></tr>
+<tr class="memdesc:a4d372040416595953c44504b7f71b622"><td class="mdescLeft">&#160;</td><td class="mdescRight">SystemRealtime callback.  <a href="classpum_1_1_parser.html#a4d372040416595953c44504b7f71b622">More...</a><br /></td></tr>
+<tr class="separator:a4d372040416595953c44504b7f71b622"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a87a37d87a621a4a142b4ae4be11eb72b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a87a37d87a621a4a142b4ae4be11eb72b">&#9670;&nbsp;</a></span>parse()</h2>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="aba2366fdd02192126fd9aa85e6a56a0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba2366fdd02192126fd9aa85e6a56a0e">&#9670;&nbsp;</a></span>onControlChange</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void pum::Parser::parse </td>
-          <td>(</td>
-          <td class="paramtype">const uint8_t(&amp;)&#160;</td>
-          <td class="paramname"><em>packet</em>[4]</td><td>)</td>
-          <td></td>
+          <td class="memname">std::function&lt;void (<a class="el" href="structpum_1_1_control_change.html">ControlChange</a>)&gt; pum::Parser::onControlChange</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Parse MIDI packet <br  />
- </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Control change callback. </p>
+<p>You can assign a lambda to this callback object to have it called when the MIDI control change is come. </p><dl class="section see"><dt>See also</dt><dd>MIDI::ControlChange </dd></dl>
+
+</div>
+</div>
+<a id="a17a0d2678dd433cea413637e13d81e00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17a0d2678dd433cea413637e13d81e00">&#9670;&nbsp;</a></span>onNoteOff</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::function&lt;void (<a class="el" href="structpum_1_1_note.html">Note</a>)&gt; pum::Parser::onNoteOff</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="structpum_1_1_note.html" title="MIDI note.">Note</a> off callback. </p>
+<p>You can assign a lambda to this callback object to have it called when the MIDI note off is come. </p><dl class="section see"><dt>See also</dt><dd>MIDI::Note </dd></dl>
+
+</div>
+</div>
+<a id="a612bdacacff7c96851307211ec5f4489"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a612bdacacff7c96851307211ec5f4489">&#9670;&nbsp;</a></span>onNoteOn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::function&lt;void (<a class="el" href="structpum_1_1_note.html">Note</a>)&gt; pum::Parser::onNoteOn</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="structpum_1_1_note.html" title="MIDI note.">Note</a> on callback. </p>
+<p>You can assign a lambda to this callback object to have it called when the MIDI note on is come. </p><dl class="section see"><dt>See also</dt><dd>MIDI::Note </dd></dl>
+
+</div>
+</div>
+<a id="a89964c6a9aa36eaa59b28c5f531f2eb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89964c6a9aa36eaa59b28c5f531f2eb7">&#9670;&nbsp;</a></span>onSysEx</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::function&lt;void (const uint8_t[], const uint8_t)&gt; pum::Parser::onSysEx</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="namespacepum_1_1_sys_ex.html" title="MIDI SysEx.">SysEx</a> callback. </p>
+<p>You can assign a lambda to this callback object to have it called when the MIDI <a class="el" href="namespacepum_1_1_sys_ex.html" title="MIDI SysEx.">SysEx</a> is come. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">packet</td><td></td></tr>
+    <tr><td class="paramname">SysExByteArray</td><td></td></tr>
+    <tr><td class="paramname">SysExByteArraySize</td><td></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a4d372040416595953c44504b7f71b622"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d372040416595953c44504b7f71b622">&#9670;&nbsp;</a></span>onSystemRealtime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::function&lt;void (uint8_t byte)&gt; pum::Parser::onSystemRealtime</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SystemRealtime callback. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">byte</td><td>SystemRealtime is 1byte message. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd>SystemRealtime </dd></dl>
 
 </div>
 </div>

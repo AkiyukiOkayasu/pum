@@ -98,55 +98,64 @@ $(document).ready(function(){initNavTree('pum___generator_8hpp_source.html','');
 <a href="pum___generator_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pum___types_8hpp.html">pum_Types.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pum___constants_8hpp.html">pum_Constants.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;cstdint&gt;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">//==============================================================================</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">//Function</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span>pum</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="pum___generator_8hpp.html#af5dc1ad7000a096f67e271577d5540d3">   25</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="structpum_1_1_usb_midi_event_packet.html">UsbMidiEventPacket</a> <a class="code" href="pum___generator_8hpp.html#af5dc1ad7000a096f67e271577d5540d3">makeNoteOn</a> (uint8_t noteNumber, uint8_t velocity, uint8_t channel)</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="structpum_1_1_usb_midi_event_packet.html">UsbMidiEventPacket</a> p;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    p.header = CodeIndexNumber::NOTE_ON;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    p.byte1 = ChannelMessage::NOTE_ON | channel;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    p.byte2 = noteNumber;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    p.byte3 = velocity;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">return</span> p;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="pum___generator_8hpp.html#abd2af23723513d7496a42001cde8341e">   40</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="structpum_1_1_usb_midi_event_packet.html">UsbMidiEventPacket</a> <a class="code" href="pum___generator_8hpp.html#abd2af23723513d7496a42001cde8341e">makeNoteOff</a> (uint8_t noteNumber, uint8_t channel)</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="structpum_1_1_usb_midi_event_packet.html">UsbMidiEventPacket</a> p;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    p.header = CodeIndexNumber::NOTE_OFF;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    p.byte1 = ChannelMessage::NOTE_OFF | channel;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    p.byte2 = noteNumber;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    p.byte3 = 0; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">return</span> p;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;} <span class="comment">// namespace pum</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">//==============================================================================</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">//Class</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">namespace </span>pum</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classpum_1_1_generator.html">   55</a></span>&#160;<span class="keyword">class </span><a class="code" href="classpum_1_1_generator.html">Generator</a></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="classpum_1_1_generator.html">Generator</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    ~<a class="code" href="classpum_1_1_generator.html">Generator</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    uint8_t channel = 0;     <span class="comment">//&lt;&lt; [0, 15]</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    uint8_t cableNumber = 0; <span class="comment">//&lt;&lt; [0, 15]</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;};</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;} <span class="comment">// namespace pum</span></div>
-<div class="ttc" id="aclasspum_1_1_generator_html"><div class="ttname"><a href="classpum_1_1_generator.html">pum::Generator</a></div><div class="ttdef"><b>Definition:</b> pum_Generator.hpp:56</div></div>
-<div class="ttc" id="apum___generator_8hpp_html_abd2af23723513d7496a42001cde8341e"><div class="ttname"><a href="pum___generator_8hpp.html#abd2af23723513d7496a42001cde8341e">pum::makeNoteOff</a></div><div class="ttdeci">UsbMidiEventPacket makeNoteOff(uint8_t noteNumber, uint8_t channel)</div><div class="ttdoc">Make USB-MIDI note off packet.</div><div class="ttdef"><b>Definition:</b> pum_Generator.hpp:40</div></div>
-<div class="ttc" id="apum___generator_8hpp_html_af5dc1ad7000a096f67e271577d5540d3"><div class="ttname"><a href="pum___generator_8hpp.html#af5dc1ad7000a096f67e271577d5540d3">pum::makeNoteOn</a></div><div class="ttdeci">UsbMidiEventPacket makeNoteOn(uint8_t noteNumber, uint8_t velocity, uint8_t channel)</div><div class="ttdoc">Make USB-MIDI note on packet.</div><div class="ttdef"><b>Definition:</b> pum_Generator.hpp:25</div></div>
-<div class="ttc" id="apum___types_8hpp_html"><div class="ttname"><a href="pum___types_8hpp.html">pum_Types.hpp</a></div></div>
-<div class="ttc" id="astructpum_1_1_usb_midi_event_packet_html"><div class="ttname"><a href="structpum_1_1_usb_midi_event_packet.html">pum::UsbMidiEventPacket</a></div><div class="ttdef"><b>Definition:</b> pum_Types.hpp:16</div></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;cassert&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span>pum</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classpum_1_1_generator.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classpum_1_1_generator.html">Generator</a></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classpum_1_1_generator.html">Generator</a> (<span class="keyword">const</span> uint8_t channel, <span class="keyword">const</span> uint8_t cableNumber)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        : channel (channel), cableNumber (cableNumber)</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    ~<a class="code" href="classpum_1_1_generator.html">Generator</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classpum_1_1_generator.html#a6cc19257a20d4acbe0e8c187f3e8e372">   32</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classpum_1_1_generator.html#a6cc19257a20d4acbe0e8c187f3e8e372">setChannel</a> (<span class="keyword">const</span> uint8_t newMIDIChannel)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        channel = newMIDIChannel;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classpum_1_1_generator.html#a8bbdfc4626bc1d2733ababcdffbe3c42">   43</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classpum_1_1_generator.html#a8bbdfc4626bc1d2733ababcdffbe3c42">makeNoteOn</a> (uint8_t packet[4], <span class="keyword">const</span> uint8_t noteNumber, <span class="keyword">const</span> uint8_t velocity)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        assert (noteNumber &lt; 128);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        assert (velocity &lt; 128);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        packet[0] = makeHeader (CodeIndexNumber::NOTE_ON);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        packet[1] = ChannelMessage::NOTE_ON | channel;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        packet[2] = noteNumber;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        packet[3] = velocity;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classpum_1_1_generator.html#a20f66085aafba4bf41c5ac8b43eae715">   58</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classpum_1_1_generator.html#a20f66085aafba4bf41c5ac8b43eae715">makeNoteOff</a> (uint8_t packet[4], <span class="keyword">const</span> uint8_t noteNumber)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        assert (noteNumber &lt; 128);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        packet[0] = makeHeader (CodeIndexNumber::NOTE_OFF);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        packet[1] = ChannelMessage::NOTE_OFF | channel;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        packet[2] = noteNumber;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        packet[3] = 0; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    uint8_t makeHeader (<span class="keyword">const</span> uint8_t cin)</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        assert (cableNumber &lt; 16);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        assert (cin &lt; 16);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">return</span> (cableNumber &lt;&lt; 4) | (cin &amp; 0xF);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    uint8_t channel = 0;     <span class="comment">//&lt;&lt; [0, 15]</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    uint8_t cableNumber = 0; <span class="comment">//&lt;&lt; [0, 15]</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;};</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;} <span class="comment">// namespace pum</span></div>
+<div class="ttc" id="aclasspum_1_1_generator_html"><div class="ttname"><a href="classpum_1_1_generator.html">pum::Generator</a></div><div class="ttdoc">USB-MIDI packet generator.</div><div class="ttdef"><b>Definition:</b> pum_Generator.hpp:20</div></div>
+<div class="ttc" id="aclasspum_1_1_generator_html_a20f66085aafba4bf41c5ac8b43eae715"><div class="ttname"><a href="classpum_1_1_generator.html#a20f66085aafba4bf41c5ac8b43eae715">pum::Generator::makeNoteOff</a></div><div class="ttdeci">void makeNoteOff(uint8_t packet[4], const uint8_t noteNumber)</div><div class="ttdoc">MIDI note OFF.</div><div class="ttdef"><b>Definition:</b> pum_Generator.hpp:58</div></div>
+<div class="ttc" id="aclasspum_1_1_generator_html_a6cc19257a20d4acbe0e8c187f3e8e372"><div class="ttname"><a href="classpum_1_1_generator.html#a6cc19257a20d4acbe0e8c187f3e8e372">pum::Generator::setChannel</a></div><div class="ttdeci">void setChannel(const uint8_t newMIDIChannel)</div><div class="ttdoc">Set MIDI channel.</div><div class="ttdef"><b>Definition:</b> pum_Generator.hpp:32</div></div>
+<div class="ttc" id="aclasspum_1_1_generator_html_a8bbdfc4626bc1d2733ababcdffbe3c42"><div class="ttname"><a href="classpum_1_1_generator.html#a8bbdfc4626bc1d2733ababcdffbe3c42">pum::Generator::makeNoteOn</a></div><div class="ttdeci">void makeNoteOn(uint8_t packet[4], const uint8_t noteNumber, const uint8_t velocity)</div><div class="ttdoc">MIDI note ON.</div><div class="ttdef"><b>Definition:</b> pum_Generator.hpp:43</div></div>
+<div class="ttc" id="apum___constants_8hpp_html"><div class="ttname"><a href="pum___constants_8hpp.html">pum_Constants.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['parse_48',['parse',['../classpum_1_1_parser.html#a87a37d87a621a4a142b4ae4be11eb72b',1,'pum::Parser']]]
+  ['setchannel_53',['setChannel',['../classpum_1_1_generator.html#a6cc19257a20d4acbe0e8c187f3e8e372',1,'pum::Generator']]]
 ];

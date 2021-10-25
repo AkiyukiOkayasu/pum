@@ -98,25 +98,192 @@ $(document).ready(function(){initNavTree('pum___parser_8hpp_source.html',''); in
 <a href="pum___parser_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;cstdint&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span>pum</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classpum_1_1_parser.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="classpum_1_1_parser.html">Parser</a></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="classpum_1_1_parser.html">Parser</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    ~<a class="code" href="classpum_1_1_parser.html">Parser</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classpum_1_1_parser.html#a87a37d87a621a4a142b4ae4be11eb72b">   24</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classpum_1_1_parser.html#a87a37d87a621a4a142b4ae4be11eb72b">parse</a> (<span class="keyword">const</span> uint8_t (&amp;packet)[4])</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    }</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;};</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;} <span class="comment">// namespace pum</span></div>
-<div class="ttc" id="aclasspum_1_1_parser_html"><div class="ttname"><a href="classpum_1_1_parser.html">pum::Parser</a></div><div class="ttdef"><b>Definition:</b> pum_Parser.hpp:16</div></div>
-<div class="ttc" id="aclasspum_1_1_parser_html_a87a37d87a621a4a142b4ae4be11eb72b"><div class="ttname"><a href="classpum_1_1_parser.html#a87a37d87a621a4a142b4ae4be11eb72b">pum::Parser::parse</a></div><div class="ttdeci">void parse(const uint8_t(&amp;packet)[4])</div><div class="ttdoc">Parse MIDI packet</div><div class="ttdef"><b>Definition:</b> pum_Parser.hpp:24</div></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pum___constants_8hpp.html">pum_Constants.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pum___types_8hpp.html">pum_Types.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;array&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">namespace </span>pum</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classpum_1_1_parser.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="classpum_1_1_parser.html">Parser</a></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="classpum_1_1_parser.html">Parser</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    ~<a class="code" href="classpum_1_1_parser.html">Parser</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> parse (<span class="keyword">const</span> uint8_t packet[4])</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keyword">const</span> uint8_t codeIndex = codeIndexNumber (packet[0]);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keyword">const</span> uint8_t cn = cableNumber (packet[0]);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keyword">const</span> uint8_t statusByte = packet[1];</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keyword">const</span> uint8_t channel = midiCh (statusByte);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">switch</span> (codeIndex)</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="namespacepum_1_1_code_index_number.html#afa2c689e2d5171ea82c31e08a0d5fe34">CodeIndexNumber::SYSCOMMON_2BYTES</a>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordflow">case</span> CodeIndexNumber::SYSCOMMON_3BYTES:</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="keywordflow">case</span> CodeIndexNumber::SYSEX_START_OR_CONTINUE:</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                <span class="keywordflow">if</span> (packet[1] == <a class="code" href="namespacepum_1_1_sys_ex.html#a897c2c45b22802c950e3f38ade94eef2">SysEx::BEGIN</a>)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                    <span class="comment">//SysEx start</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                    receivingSysEx = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                    sysExIndex = 0;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                    pushSysEx (packet[2]);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                    pushSysEx (packet[3]);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                    <span class="comment">//SysEx continue</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                    pushSysEx (packet[1]);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                    pushSysEx (packet[2]);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                    pushSysEx (packet[3]);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="namespacepum_1_1_code_index_number.html#a7ef091595ff655fc7d889eab5027e61a">CodeIndexNumber::SYSEX_END_1BYTE</a>:</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                assert (packet[1] == <a class="code" href="namespacepum_1_1_sys_ex.html#abdc4c94f66e6985cc5f7eabb2b11eb31">SysEx::END</a>);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                receivingSysEx = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="classpum_1_1_parser.html#a89964c6a9aa36eaa59b28c5f531f2eb7">onSysEx</a>)</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                    <a class="code" href="classpum_1_1_parser.html#a89964c6a9aa36eaa59b28c5f531f2eb7">onSysEx</a> (sysExData.data(), sysExIndex);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="namespacepum_1_1_code_index_number.html#ada413bbb0b5f6dd6f9f5cc3b3b0dc43f">CodeIndexNumber::SYSEX_END_2BYTES</a>:</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                assert (packet[2] == <a class="code" href="namespacepum_1_1_sys_ex.html#abdc4c94f66e6985cc5f7eabb2b11eb31">SysEx::END</a>);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                pushSysEx (packet[1]);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                receivingSysEx = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="classpum_1_1_parser.html#a89964c6a9aa36eaa59b28c5f531f2eb7">onSysEx</a>)</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                    <a class="code" href="classpum_1_1_parser.html#a89964c6a9aa36eaa59b28c5f531f2eb7">onSysEx</a> (sysExData.data(), sysExIndex);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="namespacepum_1_1_code_index_number.html#a927e8c1ab57a3f5f510fd868968eba0e">CodeIndexNumber::SYSEX_END_3BYTES</a>:</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                assert (packet[3] == <a class="code" href="namespacepum_1_1_sys_ex.html#abdc4c94f66e6985cc5f7eabb2b11eb31">SysEx::END</a>);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                pushSysEx (packet[1]);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                pushSysEx (packet[2]);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                receivingSysEx = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="classpum_1_1_parser.html#a89964c6a9aa36eaa59b28c5f531f2eb7">onSysEx</a>)</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                    <a class="code" href="classpum_1_1_parser.html#a89964c6a9aa36eaa59b28c5f531f2eb7">onSysEx</a> (sysExData.data(), sysExIndex);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">case</span> CodeIndexNumber::NOTE_OFF:</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="classpum_1_1_parser.html#a17a0d2678dd433cea413637e13d81e00">onNoteOff</a>)</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                    <a class="code" href="structpum_1_1_note.html">Note</a> note = { packet[2], packet[3], channel };</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                    <a class="code" href="classpum_1_1_parser.html#a17a0d2678dd433cea413637e13d81e00">onNoteOff</a> (note);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="keywordflow">case</span> CodeIndexNumber::NOTE_ON:</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                <span class="keyword">const</span> uint8_t noteNumber = packet[2];</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                <span class="keyword">const</span> uint8_t velocity = packet[3];</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                <a class="code" href="structpum_1_1_note.html">Note</a> note = { noteNumber, velocity, channel };</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                <span class="keywordflow">if</span> (velocity == 0) <span class="comment">// velocity 0 = noteOFF</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="classpum_1_1_parser.html#a17a0d2678dd433cea413637e13d81e00">onNoteOff</a>)</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                    {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                        <a class="code" href="classpum_1_1_parser.html#a17a0d2678dd433cea413637e13d81e00">onNoteOff</a> (note);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                    }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="classpum_1_1_parser.html#a612bdacacff7c96851307211ec5f4489">onNoteOn</a>)</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                    <a class="code" href="classpum_1_1_parser.html#a612bdacacff7c96851307211ec5f4489">onNoteOn</a> (note);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="keywordflow">case</span> CodeIndexNumber::POLYPHONIC_KEY_PRESSURE:</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            <span class="keywordflow">case</span> CodeIndexNumber::CONTROL_CHANGE:</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="classpum_1_1_parser.html#aba2366fdd02192126fd9aa85e6a56a0e">onControlChange</a>)</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                {</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                    <a class="code" href="structpum_1_1_control_change.html">ControlChange</a> cc = { packet[2], packet[3], channel };</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                    <a class="code" href="classpum_1_1_parser.html#aba2366fdd02192126fd9aa85e6a56a0e">onControlChange</a> (cc);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="namespacepum_1_1_code_index_number.html#abdd818629508d3ac48393ac9c884460b">CodeIndexNumber::PROGRAM_CHANGE</a>:</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="namespacepum_1_1_code_index_number.html#ad2131708743cddbac15581f9134fd565">CodeIndexNumber::CHANNEL_PRESSURE</a>:</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            <span class="keywordflow">case</span> CodeIndexNumber::PITCH_BEND:</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="namespacepum_1_1_code_index_number.html#a5720accdd91412394d7eb5a59844d58d">CodeIndexNumber::SYS_REALTIME</a>:</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="classpum_1_1_parser.html#a4d372040416595953c44504b7f71b622">onSystemRealtime</a>)</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                {</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                    <a class="code" href="classpum_1_1_parser.html#a4d372040416595953c44504b7f71b622">onSystemRealtime</a> (statusByte);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                }</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        }</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    }</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="classpum_1_1_parser.html#a612bdacacff7c96851307211ec5f4489">  142</a></span>&#160;    std::function&lt;void (<a class="code" href="structpum_1_1_note.html">Note</a>)&gt; <a class="code" href="classpum_1_1_parser.html#a612bdacacff7c96851307211ec5f4489">onNoteOn</a>;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno"><a class="line" href="classpum_1_1_parser.html#a17a0d2678dd433cea413637e13d81e00">  149</a></span>&#160;    std::function&lt;void (<a class="code" href="structpum_1_1_note.html">Note</a>)&gt; <a class="code" href="classpum_1_1_parser.html#a17a0d2678dd433cea413637e13d81e00">onNoteOff</a>;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="classpum_1_1_parser.html#aba2366fdd02192126fd9aa85e6a56a0e">  156</a></span>&#160;    std::function&lt;void (<a class="code" href="structpum_1_1_control_change.html">ControlChange</a>)&gt; <a class="code" href="classpum_1_1_parser.html#aba2366fdd02192126fd9aa85e6a56a0e">onControlChange</a>;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
+<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="classpum_1_1_parser.html#a89964c6a9aa36eaa59b28c5f531f2eb7">  164</a></span>&#160;    std::function&lt;void (<span class="keyword">const</span> uint8_t[], <span class="keyword">const</span> uint8_t)&gt; <a class="code" href="classpum_1_1_parser.html#a89964c6a9aa36eaa59b28c5f531f2eb7">onSysEx</a>;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="classpum_1_1_parser.html#a4d372040416595953c44504b7f71b622">  170</a></span>&#160;    std::function&lt;void (uint8_t <span class="keywordtype">byte</span>)&gt; <a class="code" href="classpum_1_1_parser.html#a4d372040416595953c44504b7f71b622">onSystemRealtime</a>;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    constexpr uint8_t midiCh (<span class="keyword">const</span> uint8_t statusByte)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <span class="comment">// MIDI StatusByte下位4bit: MIDI channel</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <span class="keywordflow">return</span> statusByte &amp; 0x0F;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    }</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    constexpr uint8_t cableNumber (<span class="keyword">const</span> uint8_t header)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <span class="comment">// Header上位4bit: CableNumber</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="keywordflow">return</span> (header &gt;&gt; 4) &amp; 0x0F;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    }</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    constexpr uint8_t codeIndexNumber (<span class="keyword">const</span> uint8_t header)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        <span class="comment">// Header下位4bit: CodeIndexNumber</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        <span class="keywordflow">return</span> header &amp; 0x0F;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    }</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordtype">void</span> pushSysEx (uint8_t d)</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    {</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        sysExData[sysExIndex] = d;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        sysExIndex++;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    }</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="keyword">static</span> constexpr uint8_t MAX_SYSEX_LENGTH = 32;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <span class="keywordtype">bool</span> receivingSysEx = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    uint8_t sysExIndex = 0;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    std::array&lt;uint8_t, MAX_SYSEX_LENGTH&gt; sysExData;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;};</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;} <span class="comment">// namespace pum</span></div>
+<div class="ttc" id="aclasspum_1_1_parser_html"><div class="ttname"><a href="classpum_1_1_parser.html">pum::Parser</a></div><div class="ttdef"><b>Definition:</b> pum_Parser.hpp:21</div></div>
+<div class="ttc" id="aclasspum_1_1_parser_html_a17a0d2678dd433cea413637e13d81e00"><div class="ttname"><a href="classpum_1_1_parser.html#a17a0d2678dd433cea413637e13d81e00">pum::Parser::onNoteOff</a></div><div class="ttdeci">std::function&lt; void(Note)&gt; onNoteOff</div><div class="ttdoc">Note off callback.</div><div class="ttdef"><b>Definition:</b> pum_Parser.hpp:149</div></div>
+<div class="ttc" id="aclasspum_1_1_parser_html_a4d372040416595953c44504b7f71b622"><div class="ttname"><a href="classpum_1_1_parser.html#a4d372040416595953c44504b7f71b622">pum::Parser::onSystemRealtime</a></div><div class="ttdeci">std::function&lt; void(uint8_t byte)&gt; onSystemRealtime</div><div class="ttdoc">SystemRealtime callback.</div><div class="ttdef"><b>Definition:</b> pum_Parser.hpp:170</div></div>
+<div class="ttc" id="aclasspum_1_1_parser_html_a612bdacacff7c96851307211ec5f4489"><div class="ttname"><a href="classpum_1_1_parser.html#a612bdacacff7c96851307211ec5f4489">pum::Parser::onNoteOn</a></div><div class="ttdeci">std::function&lt; void(Note)&gt; onNoteOn</div><div class="ttdoc">Note on callback.</div><div class="ttdef"><b>Definition:</b> pum_Parser.hpp:142</div></div>
+<div class="ttc" id="aclasspum_1_1_parser_html_a89964c6a9aa36eaa59b28c5f531f2eb7"><div class="ttname"><a href="classpum_1_1_parser.html#a89964c6a9aa36eaa59b28c5f531f2eb7">pum::Parser::onSysEx</a></div><div class="ttdeci">std::function&lt; void(const uint8_t[], const uint8_t)&gt; onSysEx</div><div class="ttdoc">SysEx callback.</div><div class="ttdef"><b>Definition:</b> pum_Parser.hpp:164</div></div>
+<div class="ttc" id="aclasspum_1_1_parser_html_aba2366fdd02192126fd9aa85e6a56a0e"><div class="ttname"><a href="classpum_1_1_parser.html#aba2366fdd02192126fd9aa85e6a56a0e">pum::Parser::onControlChange</a></div><div class="ttdeci">std::function&lt; void(ControlChange)&gt; onControlChange</div><div class="ttdoc">Control change callback.</div><div class="ttdef"><b>Definition:</b> pum_Parser.hpp:156</div></div>
+<div class="ttc" id="anamespacepum_1_1_code_index_number_html_a5720accdd91412394d7eb5a59844d58d"><div class="ttname"><a href="namespacepum_1_1_code_index_number.html#a5720accdd91412394d7eb5a59844d58d">pum::CodeIndexNumber::SYS_REALTIME</a></div><div class="ttdeci">constexpr uint8_t SYS_REALTIME</div><div class="ttdoc">データ長1Byte</div><div class="ttdef"><b>Definition:</b> pum_Constants.hpp:33</div></div>
+<div class="ttc" id="anamespacepum_1_1_code_index_number_html_a7ef091595ff655fc7d889eab5027e61a"><div class="ttname"><a href="namespacepum_1_1_code_index_number.html#a7ef091595ff655fc7d889eab5027e61a">pum::CodeIndexNumber::SYSEX_END_1BYTE</a></div><div class="ttdeci">constexpr uint8_t SYSEX_END_1BYTE</div><div class="ttdoc">SysEx最終パケット データ長1Byte.</div><div class="ttdef"><b>Definition:</b> pum_Constants.hpp:23</div></div>
+<div class="ttc" id="anamespacepum_1_1_code_index_number_html_a927e8c1ab57a3f5f510fd868968eba0e"><div class="ttname"><a href="namespacepum_1_1_code_index_number.html#a927e8c1ab57a3f5f510fd868968eba0e">pum::CodeIndexNumber::SYSEX_END_3BYTES</a></div><div class="ttdeci">constexpr uint8_t SYSEX_END_3BYTES</div><div class="ttdoc">SysEx最終パケット データ長3Byte.</div><div class="ttdef"><b>Definition:</b> pum_Constants.hpp:25</div></div>
+<div class="ttc" id="anamespacepum_1_1_code_index_number_html_abdd818629508d3ac48393ac9c884460b"><div class="ttname"><a href="namespacepum_1_1_code_index_number.html#abdd818629508d3ac48393ac9c884460b">pum::CodeIndexNumber::PROGRAM_CHANGE</a></div><div class="ttdeci">constexpr uint8_t PROGRAM_CHANGE</div><div class="ttdoc">データ長2Byte</div><div class="ttdef"><b>Definition:</b> pum_Constants.hpp:30</div></div>
+<div class="ttc" id="anamespacepum_1_1_code_index_number_html_ad2131708743cddbac15581f9134fd565"><div class="ttname"><a href="namespacepum_1_1_code_index_number.html#ad2131708743cddbac15581f9134fd565">pum::CodeIndexNumber::CHANNEL_PRESSURE</a></div><div class="ttdeci">constexpr uint8_t CHANNEL_PRESSURE</div><div class="ttdoc">データ長2Byte</div><div class="ttdef"><b>Definition:</b> pum_Constants.hpp:31</div></div>
+<div class="ttc" id="anamespacepum_1_1_code_index_number_html_ada413bbb0b5f6dd6f9f5cc3b3b0dc43f"><div class="ttname"><a href="namespacepum_1_1_code_index_number.html#ada413bbb0b5f6dd6f9f5cc3b3b0dc43f">pum::CodeIndexNumber::SYSEX_END_2BYTES</a></div><div class="ttdeci">constexpr uint8_t SYSEX_END_2BYTES</div><div class="ttdoc">SysEx最終パケット データ長2Byte.</div><div class="ttdef"><b>Definition:</b> pum_Constants.hpp:24</div></div>
+<div class="ttc" id="anamespacepum_1_1_code_index_number_html_afa2c689e2d5171ea82c31e08a0d5fe34"><div class="ttname"><a href="namespacepum_1_1_code_index_number.html#afa2c689e2d5171ea82c31e08a0d5fe34">pum::CodeIndexNumber::SYSCOMMON_2BYTES</a></div><div class="ttdeci">constexpr uint8_t SYSCOMMON_2BYTES</div><div class="ttdoc">データ長2Byte</div><div class="ttdef"><b>Definition:</b> pum_Constants.hpp:20</div></div>
+<div class="ttc" id="anamespacepum_1_1_sys_ex_html_a897c2c45b22802c950e3f38ade94eef2"><div class="ttname"><a href="namespacepum_1_1_sys_ex.html#a897c2c45b22802c950e3f38ade94eef2">pum::SysEx::BEGIN</a></div><div class="ttdeci">constexpr uint8_t BEGIN</div><div class="ttdoc">SysEx開始</div><div class="ttdef"><b>Definition:</b> pum_Constants.hpp:41</div></div>
+<div class="ttc" id="anamespacepum_1_1_sys_ex_html_abdc4c94f66e6985cc5f7eabb2b11eb31"><div class="ttname"><a href="namespacepum_1_1_sys_ex.html#abdc4c94f66e6985cc5f7eabb2b11eb31">pum::SysEx::END</a></div><div class="ttdeci">constexpr uint8_t END</div><div class="ttdoc">SysEx終了</div><div class="ttdef"><b>Definition:</b> pum_Constants.hpp:42</div></div>
+<div class="ttc" id="apum___constants_8hpp_html"><div class="ttname"><a href="pum___constants_8hpp.html">pum_Constants.hpp</a></div></div>
+<div class="ttc" id="apum___types_8hpp_html"><div class="ttname"><a href="pum___types_8hpp.html">pum_Types.hpp</a></div></div>
+<div class="ttc" id="astructpum_1_1_control_change_html"><div class="ttname"><a href="structpum_1_1_control_change.html">pum::ControlChange</a></div><div class="ttdoc">MIDI Control change.</div><div class="ttdef"><b>Definition:</b> pum_Types.hpp:33</div></div>
+<div class="ttc" id="astructpum_1_1_note_html"><div class="ttname"><a href="structpum_1_1_note.html">pum::Note</a></div><div class="ttdoc">MIDI note.</div><div class="ttdef"><b>Definition:</b> pum_Types.hpp:25</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
