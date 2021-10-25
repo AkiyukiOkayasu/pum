@@ -6,4 +6,3 @@ PUM is a C++ header-only library for USB-MIDI. +
 
 == Dependencies
 * C++17
-* https://github.com/hathach/tinyusb[tinyUSB]
