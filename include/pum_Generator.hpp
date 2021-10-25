@@ -1,5 +1,5 @@
 /**  
-    @file pum_Sender.hpp
+    @file pum_Generator.hpp
     @author Akiyuki Okayasu (akiyuki.okayasu@gmail.com)
     @copyright Copyright (c) 2021 - Akiyuki Okayasu
 
@@ -9,7 +9,6 @@
 #pragma once
 
 #include "pum_Types.hpp"
-#include "tusb.h"
 
 #include <cstdint>
 
@@ -53,14 +52,14 @@ inline UsbMidiEventPacket makeNoteOff (uint8_t noteNumber, uint8_t channel)
 //Class
 namespace pum
 {
-class Sender
+class Generator
 {
 public:
-    Sender() = default;
-    ~Sender() = default;
+    Generator() = default;
+    ~Generator() = default;
 
 private:
-    uint8_t channel = 0;
-    uint8_t cableNumber = 0;
+    uint8_t channel = 0;     //<< [0, 15]
+    uint8_t cableNumber = 0; //<< [0, 15]
 };
 } // namespace pum

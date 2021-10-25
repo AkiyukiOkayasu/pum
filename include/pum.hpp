@@ -10,6 +10,6 @@
 #pragma once
 
 #include "pum_Constants.hpp"
-#include "pum_Receiver.hpp"
-#include "pum_Sender.hpp"
+#include "pum_Generator.hpp"
+#include "pum_Parser.hpp"
 #include "pum_Types.hpp"
