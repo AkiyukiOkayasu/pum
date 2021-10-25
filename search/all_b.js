@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['value_31',['value',['../structpum_1_1_control_change.html#a43935afcc623d5777dfe447e6eeb3d00',1,'pum::ControlChange']]],
-  ['velocity_32',['velocity',['../structpum_1_1_note.html#a2fbfd17c2b5fef4d6ef886e30778cd62',1,'pum::Note']]]
+  ['usbmidieventpacket_31',['UsbMidiEventPacket',['../structpum_1_1_usb_midi_event_packet.html',1,'pum']]]
 ];

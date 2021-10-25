@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PUM: pum::Receiver Class Reference</title>
+<title>PUM: include/pum_Parser.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search','.html');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('classpum_1_1_receiver.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('pum___parser_8hpp_source.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -91,21 +91,38 @@ $(document).ready(function(){initNavTree('classpum_1_1_receiver.html',''); initR
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="classpum_1_1_receiver-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">pum::Receiver Class Reference</div>  </div>
+<div class="title">pum_Parser.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>include/<a class="el" href="pum___receiver_8hpp_source.html">pum_Receiver.hpp</a></li>
-</ul>
-</div><!-- contents -->
+<a href="pum___parser_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span>pum</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classpum_1_1_parser.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="classpum_1_1_parser.html">Parser</a></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="classpum_1_1_parser.html">Parser</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    ~<a class="code" href="classpum_1_1_parser.html">Parser</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classpum_1_1_parser.html#a87a37d87a621a4a142b4ae4be11eb72b">   24</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classpum_1_1_parser.html#a87a37d87a621a4a142b4ae4be11eb72b">parse</a> (<span class="keyword">const</span> uint8_t (&amp;packet)[4])</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;};</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;} <span class="comment">// namespace pum</span></div>
+<div class="ttc" id="aclasspum_1_1_parser_html"><div class="ttname"><a href="classpum_1_1_parser.html">pum::Parser</a></div><div class="ttdef"><b>Definition:</b> pum_Parser.hpp:16</div></div>
+<div class="ttc" id="aclasspum_1_1_parser_html_a87a37d87a621a4a142b4ae4be11eb72b"><div class="ttname"><a href="classpum_1_1_parser.html#a87a37d87a621a4a142b4ae4be11eb72b">pum::Parser::parse</a></div><div class="ttdeci">void parse(const uint8_t(&amp;packet)[4])</div><div class="ttdoc">Parse MIDI packet</div><div class="ttdef"><b>Definition:</b> pum_Parser.hpp:24</div></div>
+</div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>pum</b></li><li class="navelem"><a class="el" href="classpum_1_1_receiver.html">Receiver</a></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="pum___parser_8hpp.html">pum_Parser.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

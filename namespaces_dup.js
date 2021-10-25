@@ -42,12 +42,12 @@ var namespaces_dup =
         [ "SYSTEM_RESET", "pum___constants_8hpp.html#ae5d7ae8191706f052d612a5fd0caa5b0", null ],
         [ "TIMING_CLOCK", "pum___constants_8hpp.html#afa914f97f1fc56942ad989cfbd3bb92c", null ]
       ] ],
-      [ "Receiver", "classpum_1_1_receiver.html", "classpum_1_1_receiver" ],
-      [ "Sender", "classpum_1_1_sender.html", "classpum_1_1_sender" ],
+      [ "Generator", "classpum_1_1_generator.html", "classpum_1_1_generator" ],
+      [ "Parser", "classpum_1_1_parser.html", "classpum_1_1_parser" ],
       [ "UsbMidiEventPacket", "structpum_1_1_usb_midi_event_packet.html", "structpum_1_1_usb_midi_event_packet" ],
       [ "Note", "structpum_1_1_note.html", "structpum_1_1_note" ],
       [ "ControlChange", "structpum_1_1_control_change.html", "structpum_1_1_control_change" ],
-      [ "makeNoteOff", "pum___sender_8hpp.html#abd2af23723513d7496a42001cde8341e", null ],
-      [ "makeNoteOn", "pum___sender_8hpp.html#af5dc1ad7000a096f67e271577d5540d3", null ]
+      [ "makeNoteOff", "pum___generator_8hpp.html#abd2af23723513d7496a42001cde8341e", null ],
+      [ "makeNoteOn", "pum___generator_8hpp.html#af5dc1ad7000a096f67e271577d5540d3", null ]
     ] ]
 ];
