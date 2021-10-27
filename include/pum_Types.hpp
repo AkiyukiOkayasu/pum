@@ -57,4 +57,12 @@ struct PolyphonicKeyPressure
     uint8_t pressure;   ///< [0, 127]
     uint8_t channel;    ///< [0, 15]
 };
+
+/// MIDI Pitch bend
+struct PitchBend
+{
+    int16_t bend;    ///< [-8192, 8191]
+    uint8_t channel; ///< [0, 15]
+};
+
 } // namespace pum

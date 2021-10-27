@@ -137,6 +137,11 @@ public:
                 }
                 break;
             case CodeIndexNumber::PITCH_BEND:
+                if (onPitchBend)
+                {
+                    const PitchBend pb = { mergeMIDIBytes (packet[2], packet[3]), channel };
+                    onPitchBend (pb);
+                }
                 break;
             case CodeIndexNumber::SYS_REALTIME:
                 if (onSystemRealtime)
@@ -197,6 +202,13 @@ public:
      MIDI Polyphonic key pressure is come.
     */
     std::function<void (PolyphonicKeyPressure)> onPolyphonicKeyPressure;
+
+    /** Polyphonic key pressure callback.
+        You can assign a lambda to this callback object to have it called when the
+     MIDI Pitch bend is come.
+    */
+    std::function<void (PitchBend)> onPitchBend;
+
 private:
     constexpr uint8_t midiCh (const uint8_t statusByte) const
     {
@@ -234,6 +246,18 @@ private:
     {
         sysExData[sysExIndex] = d;
         sysExIndex++;
+    }
+
+    /** 2つの7bit数を合わせて[-8192, +8191]の数を返す.
+        PitchBendで使う.
+        https://www.g200kg.com/jp/docs/dic/pitchbend.html        
+        @param lsb 7bit [0, 127]
+        @param msb 7bit [0, 127]        
+    */
+    int16_t mergeMIDIBytes (uint8_t lsb, uint8_t msb)
+    {
+        uint16_t v = (static_cast<uint16_t> (msb) << 9) | (static_cast<uint16_t> (lsb) << 2);
+        return (static_cast<int16_t> (v) >> 2);
     }
 
     static constexpr uint8_t MAX_SYSEX_LENGTH = 32;
