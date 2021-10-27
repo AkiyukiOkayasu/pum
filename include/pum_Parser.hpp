@@ -92,7 +92,7 @@ public:
             {
                 const uint8_t noteNumber = packet[2];
                 const uint8_t velocity = packet[3];
-                Note note = { noteNumber, velocity, channel };
+                const Note note = { noteNumber, velocity, channel };
                 if (velocity == 0) // velocity 0 = noteOFF
                 {
                     if (onNoteOff)
@@ -113,14 +113,14 @@ public:
             case CodeIndexNumber::CONTROL_CHANGE:
                 if (onControlChange)
                 {
-                    ControlChange cc = { packet[2], packet[3], channel };
+                    const ControlChange cc = { packet[2], packet[3], channel };
                     onControlChange (cc);
                 }
                 break;
             case CodeIndexNumber::PROGRAM_CHANGE:
                 if (onProgramChange)
                 {
-                    ProgramChange pgc = { packet[2], channel };
+                    const ProgramChange pgc = { packet[2], channel };
                     onProgramChange (pgc);
                 }
                 break;
