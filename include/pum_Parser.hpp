@@ -187,7 +187,7 @@ public:
 
     /** Program change callback.
         You can assign a lambda to this callback object to have it called when the
-     MIDI Program change is come.        
+     MIDI Program change is come.
     */
     std::function<void (ProgramChange)> onProgramChange;
 
