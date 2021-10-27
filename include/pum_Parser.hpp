@@ -125,6 +125,11 @@ public:
                 }
                 break;
             case CodeIndexNumber::CHANNEL_PRESSURE:
+                if (onChannelPressure)
+                {
+                    const ChannelPressure cp = { packet[2], channel };
+                    onChannelPressure (cp);
+                }
                 break;
             case CodeIndexNumber::PITCH_BEND:
                 break;
@@ -176,6 +181,11 @@ public:
     */
     std::function<void (ProgramChange)> onProgramChange;
 
+    /** Channel pressure callback.
+        You can assign a lambda to this callback object to have it called when the
+     MIDI Channel pressure is come.
+    */
+    std::function<void (ChannelPressure)> onChannelPressure;
 private:
     constexpr uint8_t midiCh (const uint8_t statusByte) const
     {

@@ -42,4 +42,11 @@ struct ProgramChange
     uint8_t programNumber; ///< [0, 127]
     uint8_t channel;       ///< [0, 15]
 };
+
+/// MIDI Channel pressure
+struct ChannelPressure
+{
+    uint8_t pressure; ///< [0, 127]
+    uint8_t channel;  ///< [0, 15]
+};
 } // namespace pum
