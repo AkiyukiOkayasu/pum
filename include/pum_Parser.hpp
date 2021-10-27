@@ -135,23 +135,20 @@ public:
     }
 
     /** Note on callback.
-      You can assign a lambda to this callback object to have it called when the
-     MIDI note on is come.
-      @see MIDI::Note
+        You can assign a lambda to this callback object to have it called when the
+     MIDI note on is come.      
     */
     std::function<void (Note)> onNoteOn;
 
     /** Note off callback.
-      You can assign a lambda to this callback object to have it called when the
-     MIDI note off is come.
-      @see MIDI::Note
+        You can assign a lambda to this callback object to have it called when the
+     MIDI note off is come.      
     */
     std::function<void (Note)> onNoteOff;
 
     /** Control change callback.
       You can assign a lambda to this callback object to have it called when the
-     MIDI control change is come.
-      @see MIDI::ControlChange
+     MIDI control change is come.      
     */
     std::function<void (ControlChange)> onControlChange;
 
@@ -164,8 +161,7 @@ public:
     std::function<void (const uint8_t[], const uint8_t)> onSysEx;
 
     /** SystemRealtime callback.
-      @param byte SystemRealtime is 1byte message.
-      @see SystemRealtime
+        @param byte SystemRealtime is 1byte message.      
     */
     std::function<void (uint8_t byte)> onSystemRealtime;
 
