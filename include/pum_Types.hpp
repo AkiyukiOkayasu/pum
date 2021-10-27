@@ -35,4 +35,11 @@ struct ControlChange
     uint8_t value;         ///< [0, 127]
     uint8_t channel;       ///< [0, 15]
 };
+
+/// MIDI Program change
+struct ProgramChange
+{
+    uint8_t programNumber; ///< [0, 127]
+    uint8_t channel;       ///< [0, 15]
+};
 } // namespace pum

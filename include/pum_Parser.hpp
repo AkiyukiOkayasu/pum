@@ -118,6 +118,11 @@ public:
                 }
                 break;
             case CodeIndexNumber::PROGRAM_CHANGE:
+                if (onProgramChange)
+                {
+                    ProgramChange pgc = { packet[2], channel };
+                    onProgramChange (pgc);
+                }
                 break;
             case CodeIndexNumber::CHANNEL_PRESSURE:
                 break;
@@ -164,6 +169,12 @@ public:
         @param byte SystemRealtime is 1byte message.      
     */
     std::function<void (uint8_t byte)> onSystemRealtime;
+
+    /** Program change callback.
+        You can assign a lambda to this callback object to have it called when the
+     MIDI Program change is come.        
+    */
+    std::function<void (ProgramChange)> onProgramChange;
 
 private:
     constexpr uint8_t midiCh (const uint8_t statusByte) const
