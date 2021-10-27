@@ -8,7 +8,7 @@ if(MAIN_PROJECT)
     message(STATUS "PUM UnitTest settings begin")
     cmake_minimum_required(VERSION 3.14)    
 
-    project(pum VERSION 0.2.4 LANGUAGES CXX)
+    project(pum VERSION 0.2.0 LANGUAGES CXX)
     set(CMAKE_CXX_STANDARD 17)#C++17    
 
     # test
