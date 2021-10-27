@@ -123,8 +123,37 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a4d372040416595953c44504b7f71b622"><td class="memItemLeft" align="right" valign="top">std::function&lt; void(uint8_t byte)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpum_1_1_parser.html#a4d372040416595953c44504b7f71b622">onSystemRealtime</a></td></tr>
 <tr class="memdesc:a4d372040416595953c44504b7f71b622"><td class="mdescLeft">&#160;</td><td class="mdescRight">SystemRealtime callback.  <a href="classpum_1_1_parser.html#a4d372040416595953c44504b7f71b622">More...</a><br /></td></tr>
 <tr class="separator:a4d372040416595953c44504b7f71b622"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9f12daf012b23432be555a48e37bef7"><td class="memItemLeft" align="right" valign="top">std::function&lt; void(<a class="el" href="structpum_1_1_program_change.html">ProgramChange</a>)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpum_1_1_parser.html#aa9f12daf012b23432be555a48e37bef7">onProgramChange</a></td></tr>
+<tr class="memdesc:aa9f12daf012b23432be555a48e37bef7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Program change callback.  <a href="classpum_1_1_parser.html#aa9f12daf012b23432be555a48e37bef7">More...</a><br /></td></tr>
+<tr class="separator:aa9f12daf012b23432be555a48e37bef7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70afc72bb50f9ac95e9f179f4282678b"><td class="memItemLeft" align="right" valign="top">std::function&lt; void(<a class="el" href="structpum_1_1_channel_pressure.html">ChannelPressure</a>)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpum_1_1_parser.html#a70afc72bb50f9ac95e9f179f4282678b">onChannelPressure</a></td></tr>
+<tr class="memdesc:a70afc72bb50f9ac95e9f179f4282678b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Channel pressure callback.  <a href="classpum_1_1_parser.html#a70afc72bb50f9ac95e9f179f4282678b">More...</a><br /></td></tr>
+<tr class="separator:a70afc72bb50f9ac95e9f179f4282678b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af06478f97805e5f3f57c840354d95345"><td class="memItemLeft" align="right" valign="top">std::function&lt; void(<a class="el" href="structpum_1_1_polyphonic_key_pressure.html">PolyphonicKeyPressure</a>)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpum_1_1_parser.html#af06478f97805e5f3f57c840354d95345">onPolyphonicKeyPressure</a></td></tr>
+<tr class="memdesc:af06478f97805e5f3f57c840354d95345"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polyphonic key pressure callback.  <a href="classpum_1_1_parser.html#af06478f97805e5f3f57c840354d95345">More...</a><br /></td></tr>
+<tr class="separator:af06478f97805e5f3f57c840354d95345"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a624e2c5a98a22f4a5addb98bee93281d"><td class="memItemLeft" align="right" valign="top">std::function&lt; void(<a class="el" href="structpum_1_1_pitch_bend.html">PitchBend</a>)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpum_1_1_parser.html#a624e2c5a98a22f4a5addb98bee93281d">onPitchBend</a></td></tr>
+<tr class="memdesc:a624e2c5a98a22f4a5addb98bee93281d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polyphonic key pressure callback.  <a href="classpum_1_1_parser.html#a624e2c5a98a22f4a5addb98bee93281d">More...</a><br /></td></tr>
+<tr class="separator:a624e2c5a98a22f4a5addb98bee93281d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a70afc72bb50f9ac95e9f179f4282678b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70afc72bb50f9ac95e9f179f4282678b">&#9670;&nbsp;</a></span>onChannelPressure</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::function&lt;void (<a class="el" href="structpum_1_1_channel_pressure.html">ChannelPressure</a>)&gt; pum::Parser::onChannelPressure</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Channel pressure callback. </p>
+<p>You can assign a lambda to this callback object to have it called when the MIDI Channel pressure is come. </p>
+
+</div>
+</div>
 <a id="aba2366fdd02192126fd9aa85e6a56a0e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aba2366fdd02192126fd9aa85e6a56a0e">&#9670;&nbsp;</a></span>onControlChange</h2>
 
@@ -138,7 +167,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Control change callback. </p>
-<p>You can assign a lambda to this callback object to have it called when the MIDI control change is come. </p><dl class="section see"><dt>See also</dt><dd>MIDI::ControlChange </dd></dl>
+<p>You can assign a lambda to this callback object to have it called when the MIDI control change is come. <br  />
+ </p>
 
 </div>
 </div>
@@ -155,7 +185,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p><a class="el" href="structpum_1_1_note.html" title="MIDI note.">Note</a> off callback. </p>
-<p>You can assign a lambda to this callback object to have it called when the MIDI note off is come. </p><dl class="section see"><dt>See also</dt><dd>MIDI::Note </dd></dl>
+<p>You can assign a lambda to this callback object to have it called when the MIDI note off is come. <br  />
+ </p>
 
 </div>
 </div>
@@ -172,7 +203,59 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p><a class="el" href="structpum_1_1_note.html" title="MIDI note.">Note</a> on callback. </p>
-<p>You can assign a lambda to this callback object to have it called when the MIDI note on is come. </p><dl class="section see"><dt>See also</dt><dd>MIDI::Note </dd></dl>
+<p>You can assign a lambda to this callback object to have it called when the MIDI note on is come. <br  />
+ </p>
+
+</div>
+</div>
+<a id="a624e2c5a98a22f4a5addb98bee93281d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a624e2c5a98a22f4a5addb98bee93281d">&#9670;&nbsp;</a></span>onPitchBend</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::function&lt;void (<a class="el" href="structpum_1_1_pitch_bend.html">PitchBend</a>)&gt; pum::Parser::onPitchBend</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Polyphonic key pressure callback. </p>
+<p>You can assign a lambda to this callback object to have it called when the MIDI Pitch bend is come. </p>
+
+</div>
+</div>
+<a id="af06478f97805e5f3f57c840354d95345"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af06478f97805e5f3f57c840354d95345">&#9670;&nbsp;</a></span>onPolyphonicKeyPressure</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::function&lt;void (<a class="el" href="structpum_1_1_polyphonic_key_pressure.html">PolyphonicKeyPressure</a>)&gt; pum::Parser::onPolyphonicKeyPressure</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Polyphonic key pressure callback. </p>
+<p>You can assign a lambda to this callback object to have it called when the MIDI Polyphonic key pressure is come. </p>
+
+</div>
+</div>
+<a id="aa9f12daf012b23432be555a48e37bef7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9f12daf012b23432be555a48e37bef7">&#9670;&nbsp;</a></span>onProgramChange</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::function&lt;void (<a class="el" href="structpum_1_1_program_change.html">ProgramChange</a>)&gt; pum::Parser::onProgramChange</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Program change callback. </p>
+<p>You can assign a lambda to this callback object to have it called when the MIDI Program change is come. </p>
 
 </div>
 </div>
@@ -214,11 +297,11 @@ Public Attributes</h2></td></tr>
 <p>SystemRealtime callback. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">byte</td><td>SystemRealtime is 1byte message. </td></tr>
+    <tr><td class="paramname">byte</td><td>SystemRealtime is 1byte message. <br  />
+ </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd>SystemRealtime </dd></dl>
 
 </div>
 </div>
