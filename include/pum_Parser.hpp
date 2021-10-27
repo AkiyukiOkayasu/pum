@@ -109,6 +109,11 @@ public:
                 break;
             }
             case CodeIndexNumber::POLYPHONIC_KEY_PRESSURE:
+                if (onPolyphonicKeyPressure)
+                {
+                    const PolyphonicKeyPressure pkp = { packet[2], packet[3], channel };
+                    onPolyphonicKeyPressure (pkp);
+                }
                 break;
             case CodeIndexNumber::CONTROL_CHANGE:
                 if (onControlChange)
@@ -186,6 +191,12 @@ public:
      MIDI Channel pressure is come.
     */
     std::function<void (ChannelPressure)> onChannelPressure;
+
+    /** Polyphonic key pressure callback.
+        You can assign a lambda to this callback object to have it called when the
+     MIDI Polyphonic key pressure is come.
+    */
+    std::function<void (PolyphonicKeyPressure)> onPolyphonicKeyPressure;
 private:
     constexpr uint8_t midiCh (const uint8_t statusByte) const
     {

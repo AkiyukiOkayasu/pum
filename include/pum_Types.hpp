@@ -49,4 +49,12 @@ struct ChannelPressure
     uint8_t pressure; ///< [0, 127]
     uint8_t channel;  ///< [0, 15]
 };
+
+/// MIDI Polyphonic key pressure
+struct PolyphonicKeyPressure
+{
+    uint8_t noteNumber; ///< [0, 127]
+    uint8_t pressure;   ///< [0, 127]
+    uint8_t channel;    ///< [0, 15]
+};
 } // namespace pum
