@@ -22,6 +22,7 @@ public:
     Generator (const uint8_t channel, const uint8_t cableNumber)
         : channel (channel), cableNumber (cableNumber)
     {
+        assert (cableNumber < 16);
     }
 
     ~Generator() = default;
