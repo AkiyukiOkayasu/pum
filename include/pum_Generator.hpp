@@ -65,7 +65,11 @@ public:
     }
 
 private:
-    uint8_t makeHeader (const uint8_t cin)
+    /** Make Header (Byte0) of USB-MIDI event packet from Code index number and Cable number.
+        @param cin CodeIndexNumber [0, 15]
+        @return Header (Byte0) of USB-MIDI event packet
+    */
+    constexpr uint8_t makeHeader (const uint8_t cin) const
     {
         assert (cin < 16);
         return (cableNumber << 4) | (cin & 0xF);
