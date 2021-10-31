@@ -64,6 +64,23 @@ public:
         packet[3] = 0; ///< velocity 0
     }
 
+
+    /** Generate USB-MIDI event packets with Pitch Bend.    
+        @param packet Array for storing USB-MIDI event packets.
+        @param bend [-8192, 8191]
+    */
+    void makePitchBend (uint8_t packet[4], const int16_t bend)
+    {
+        assert (bend <= 8191);
+        assert (bend >= -8192);
+        const uint8_t lsb = getLsb7bit (bend);
+        const uint8_t msb = getMsb7bit (bend);
+        packet[0] = makeHeader (CodeIndexNumber::PITCH_BEND);
+        packet[1] = ChannelMessage::ChannelVoiceMessage::PITCH_BEND | channel;
+        packet[2] = lsb;
+        packet[3] = msb;
+    }
+
 private:
     /** Make Header (Byte0) of USB-MIDI event packet from Code index number and Cable number.
         @param cin CodeIndexNumber [0, 15]
@@ -73,6 +90,18 @@ private:
     {
         assert (cin < 16);
         return (cableNumber << 4) | (cin & 0xF);
+    }
+
+    /// Get LSB 7bit.
+    constexpr uint8_t getLsb7bit (const int16_t v)
+    {
+        return static_cast<uint8_t> (0b00000000'01111111 & v);
+    }
+
+    /// Get MSB 7bit from 14bit value.
+    constexpr uint8_t getMsb7bit (const int16_t v)
+    {
+        return static_cast<uint8_t> (0b00000000'01111111 & (v >> 7));
     }
 
     uint8_t channel = 0;     //<< [0, 15]
