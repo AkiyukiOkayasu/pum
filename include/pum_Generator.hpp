@@ -36,9 +36,8 @@ public:
         channel = newMidiChannel;
     }
 
-    /** MIDI note ON.
-    
-        @param packet 
+    /** Generate USB-MIDI event packets with Note on.
+        @param packet Array for storing USB-MIDI event packets.
         @param noteNumber [0, 127]
         @param velocity [0, 127]
     */
@@ -52,9 +51,8 @@ public:
         packet[3] = velocity;
     }
 
-    /** MIDI note OFF.
-    
-        @param packet 
+    /** Generate USB-MIDI event packets with Note off.
+        @param packet Array for storing USB-MIDI event packets.
         @param noteNumber [0, 127]
     */
     void makeNoteOff (uint8_t packet[4], const uint8_t noteNumber)
