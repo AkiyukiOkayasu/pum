@@ -6,3 +6,22 @@ PUM is a C++ header-only library for USB-MIDI. +
 
 == Dependencies
 * C++17
+
+== Supported 
+
+=== Generate
+* Note On/Off
+* Control Change (CC)
+* Program Change
+* Channel Pressure
+* Pitch Bend
+
+=== Parse
+* Note On/Off
+* Control Change (CC)
+* Program Change
+* Channel Pressure
+* Pitch Bend
+* Polyphonic Key Pressure
+* System Realtime
+* System Exclusive (SysEx)
