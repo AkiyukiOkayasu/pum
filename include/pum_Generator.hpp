@@ -64,6 +64,20 @@ public:
         packet[3] = 0; ///< velocity 0
     }
 
+    /** Generate USB-MIDI event packets with Control Change (CC).
+        @param packet Array for storing USB-MIDI event packets.
+        @param controlNumber [0, 119]
+        @param value [0, 127]
+    */
+    void makeControlChange (uint8_t packet[4], const uint8_t controlNumber, const uint8_t value)
+    {
+        assert (controlNumber <= 119);
+        assert (value < 128);
+        packet[0] = makeHeader (CodeIndexNumber::CONTROL_CHANGE);
+        packet[1] = ChannelMessage::ChannelVoiceMessage::CONTROL_CHANGE | channel;
+        packet[2] = controlNumber;
+        packet[3] = value;
+    }
 
     /** Generate USB-MIDI event packets with Program Change.
         @param packet Array for storing USB-MIDI event packets.
