@@ -120,41 +120,71 @@ $(document).ready(function(){initNavTree('pum___constants_8hpp_source.html','');
 <div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="namespacepum_1_1_code_index_number.html#a5720accdd91412394d7eb5a59844d58d">   33</a></span>&#160;    <span class="keyword">inline</span> constexpr uint8_t <a class="code" href="namespacepum_1_1_code_index_number.html#a5720accdd91412394d7eb5a59844d58d">SYS_REALTIME</a> = 0x0F; </div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;} <span class="comment">// namespace CodeIndexNumber</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="namespacepum_1_1_sys_ex.html">   39</a></span>&#160;<span class="keyword">namespace </span>SysEx</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="namespacepum_1_1_sys_ex.html#a897c2c45b22802c950e3f38ade94eef2">   41</a></span>&#160;    <span class="keyword">inline</span> constexpr uint8_t <a class="code" href="namespacepum_1_1_sys_ex.html#a897c2c45b22802c950e3f38ade94eef2">BEGIN</a> = 0xF0; </div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="namespacepum_1_1_sys_ex.html#abdc4c94f66e6985cc5f7eabb2b11eb31">   42</a></span>&#160;    <span class="keyword">inline</span> constexpr uint8_t <a class="code" href="namespacepum_1_1_sys_ex.html#abdc4c94f66e6985cc5f7eabb2b11eb31">END</a> = 0xF7;   </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">namespace </span>ManufacturerID</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    {</div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="pum___constants_8hpp.html#a27fd6f4abb7c3f84cb2b7cdce485e8fd">   46</a></span>&#160;        <span class="keyword">inline</span> constexpr uint8_t <a class="code" href="pum___constants_8hpp.html#a27fd6f4abb7c3f84cb2b7cdce485e8fd">NON_COMMERCIAL</a> = 0x7D; </div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="pum___constants_8hpp.html#a23046b4a325dca1d20064fe9e8642957">   47</a></span>&#160;        <span class="keyword">inline</span> constexpr uint8_t <a class="code" href="pum___constants_8hpp.html#a23046b4a325dca1d20064fe9e8642957">NON_REALTIME</a> = 0x7E;   </div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="pum___constants_8hpp.html#a6c3e657bea43b13211d4f3f2bd090417">   48</a></span>&#160;        <span class="keyword">inline</span> constexpr uint8_t <a class="code" href="pum___constants_8hpp.html#a6c3e657bea43b13211d4f3f2bd090417">REALTIME</a> = 0x7F;       </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }                                                   <span class="comment">// namespace ManufacturerID</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">namespace </span>DeviceID</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    {</div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="pum___constants_8hpp.html#a6ccfbdba75fa854878d1d560225fec54">   53</a></span>&#160;        <span class="keyword">inline</span> constexpr uint8_t <a class="code" href="pum___constants_8hpp.html#a6ccfbdba75fa854878d1d560225fec54">ALL</a> = 0x7F;  </div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="pum___constants_8hpp.html#a1f76a8503d157d15257870ddc86e4e5c">   54</a></span>&#160;        <span class="keyword">inline</span> constexpr uint8_t <a class="code" href="pum___constants_8hpp.html#a1f76a8503d157d15257870ddc86e4e5c">JADE</a> = 0x76; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }                                         <span class="comment">// namespace DeviceID</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;} <span class="comment">// namespace SysEx</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">namespace </span>ChannelMessage</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;{</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">inline</span> constexpr uint8_t NOTE_ON = 0x90;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">inline</span> constexpr uint8_t NOTE_OFF = 0x80;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;} <span class="comment">// namespace ChannelMessage</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">namespace </span>SystemRealtime</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">inline</span> constexpr uint8_t TIMING_CLOCK = 0xF8;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">inline</span> constexpr uint8_t START = 0xFA;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">inline</span> constexpr uint8_t CONTINUE = 0xFB;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">inline</span> constexpr uint8_t STOP = 0xFC;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">inline</span> constexpr uint8_t ACTIVE_SENSING = 0xFE;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">inline</span> constexpr uint8_t SYSTEM_RESET = 0xFF;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;} <span class="comment">// namespace SystemRealtime</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;} <span class="comment">// namespace pum</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="namespacepum_1_1_sys_ex.html">   40</a></span>&#160;<span class="keyword">namespace </span>SysEx</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="namespacepum_1_1_sys_ex.html#a897c2c45b22802c950e3f38ade94eef2">   42</a></span>&#160;    <span class="keyword">inline</span> constexpr uint8_t <a class="code" href="namespacepum_1_1_sys_ex.html#a897c2c45b22802c950e3f38ade94eef2">BEGIN</a> = 0xF0; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="namespacepum_1_1_sys_ex.html#abdc4c94f66e6985cc5f7eabb2b11eb31">   43</a></span>&#160;    <span class="keyword">inline</span> constexpr uint8_t <a class="code" href="namespacepum_1_1_sys_ex.html#abdc4c94f66e6985cc5f7eabb2b11eb31">END</a> = 0xF7;   </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">namespace </span>ManufacturerID</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    {</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="pum___constants_8hpp.html#a27fd6f4abb7c3f84cb2b7cdce485e8fd">   47</a></span>&#160;        <span class="keyword">inline</span> constexpr uint8_t <a class="code" href="pum___constants_8hpp.html#a27fd6f4abb7c3f84cb2b7cdce485e8fd">NON_COMMERCIAL</a> = 0x7D; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="pum___constants_8hpp.html#a23046b4a325dca1d20064fe9e8642957">   48</a></span>&#160;        <span class="keyword">inline</span> constexpr uint8_t <a class="code" href="pum___constants_8hpp.html#a23046b4a325dca1d20064fe9e8642957">NON_REALTIME</a> = 0x7E;   </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="pum___constants_8hpp.html#a6c3e657bea43b13211d4f3f2bd090417">   49</a></span>&#160;        <span class="keyword">inline</span> constexpr uint8_t <a class="code" href="pum___constants_8hpp.html#a6c3e657bea43b13211d4f3f2bd090417">REALTIME</a> = 0x7F;       </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }                                                   <span class="comment">// namespace ManufacturerID</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">namespace </span>DeviceID</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    {</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="pum___constants_8hpp.html#a6ccfbdba75fa854878d1d560225fec54">   54</a></span>&#160;        <span class="keyword">inline</span> constexpr uint8_t <a class="code" href="pum___constants_8hpp.html#a6ccfbdba75fa854878d1d560225fec54">ALL</a> = 0x7F;  </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="pum___constants_8hpp.html#a1f76a8503d157d15257870ddc86e4e5c">   55</a></span>&#160;        <span class="keyword">inline</span> constexpr uint8_t <a class="code" href="pum___constants_8hpp.html#a1f76a8503d157d15257870ddc86e4e5c">JADE</a> = 0x76; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }                                         <span class="comment">// namespace DeviceID</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;} <span class="comment">// namespace SysEx</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="namespacepum_1_1_channel_message.html">   60</a></span>&#160;<span class="keyword">namespace </span>ChannelMessage</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;{</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="namespacepum_1_1_channel_message_1_1_channel_voice_message.html">   63</a></span>&#160;    <span class="keyword">namespace </span>ChannelVoiceMessage</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keyword">inline</span> constexpr uint8_t NOTE_ON = 0x90;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keyword">inline</span> constexpr uint8_t NOTE_OFF = 0x80;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keyword">inline</span> constexpr uint8_t POLYPHONIC_KEY_PRESSURE = 0xA0;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keyword">inline</span> constexpr uint8_t CONTROL_CHANGE = 0xB0;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keyword">inline</span> constexpr uint8_t PROGRAM_CHANGE = 0xC0;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keyword">inline</span> constexpr uint8_t CHANNEL_PRESSURE = 0xD0;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keyword">inline</span> constexpr uint8_t PITCH_BEND = 0xE0;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    } <span class="comment">// namespace ChannelVoiceMessage</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="namespacepum_1_1_channel_message_1_1_channel_mode_message.html">   75</a></span>&#160;    <span class="keyword">namespace </span>ChannelModeMessage</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keyword">inline</span> constexpr uint8_t ALL_SOUND_OFF = 0x78;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keyword">inline</span> constexpr uint8_t RESET_ALL_CONTROLLER = 0x79;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keyword">inline</span> constexpr uint8_t LOCAL_CONTROL = 0x7A;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keyword">inline</span> constexpr uint8_t ALL_NOTE_OFF = 0x7B;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="namespacepum_1_1_channel_message_1_1_channel_mode_message_1_1_midi_mode_config.html">   95</a></span>&#160;        <span class="keyword">namespace </span>MidiModeConfig</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="keyword">inline</span> constexpr uint8_t OMNI_ON = 0x7D;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <span class="keyword">inline</span> constexpr uint8_t OMNI_OFF = 0x7C;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <span class="keyword">inline</span> constexpr uint8_t POLY = 0x7F;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="keyword">inline</span> constexpr uint8_t MONO = 0x7E;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        } <span class="comment">// namespace MidiModeConfig</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    }     <span class="comment">// namespace ChannelModeMessage</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;} <span class="comment">// namespace ChannelMessage</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="namespacepum_1_1_system_realtime.html">  107</a></span>&#160;<span class="keyword">namespace </span>SystemRealtime</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;{</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keyword">inline</span> constexpr uint8_t TIMING_CLOCK = 0xF8;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keyword">inline</span> constexpr uint8_t START = 0xFA;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keyword">inline</span> constexpr uint8_t CONTINUE = 0xFB;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keyword">inline</span> constexpr uint8_t STOP = 0xFC;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keyword">inline</span> constexpr uint8_t ACTIVE_SENSING = 0xFE;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keyword">inline</span> constexpr uint8_t SYSTEM_RESET = 0xFF;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;} <span class="comment">// namespace SystemRealtime</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="namespacepum_1_1_system_common_message.html">  121</a></span>&#160;<span class="keyword">namespace </span>SystemCommonMessage</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;{</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;}</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;} <span class="comment">// namespace pum</span></div>
 <div class="ttc" id="anamespacepum_1_1_code_index_number_html_a5720accdd91412394d7eb5a59844d58d"><div class="ttname"><a href="namespacepum_1_1_code_index_number.html#a5720accdd91412394d7eb5a59844d58d">pum::CodeIndexNumber::SYS_REALTIME</a></div><div class="ttdeci">constexpr uint8_t SYS_REALTIME</div><div class="ttdoc">データ長1Byte</div><div class="ttdef"><b>Definition:</b> pum_Constants.hpp:33</div></div>
 <div class="ttc" id="anamespacepum_1_1_code_index_number_html_a7ef091595ff655fc7d889eab5027e61a"><div class="ttname"><a href="namespacepum_1_1_code_index_number.html#a7ef091595ff655fc7d889eab5027e61a">pum::CodeIndexNumber::SYSEX_END_1BYTE</a></div><div class="ttdeci">constexpr uint8_t SYSEX_END_1BYTE</div><div class="ttdoc">SysEx最終パケット データ長1Byte.</div><div class="ttdef"><b>Definition:</b> pum_Constants.hpp:23</div></div>
 <div class="ttc" id="anamespacepum_1_1_code_index_number_html_a927e8c1ab57a3f5f510fd868968eba0e"><div class="ttname"><a href="namespacepum_1_1_code_index_number.html#a927e8c1ab57a3f5f510fd868968eba0e">pum::CodeIndexNumber::SYSEX_END_3BYTES</a></div><div class="ttdeci">constexpr uint8_t SYSEX_END_3BYTES</div><div class="ttdoc">SysEx最終パケット データ長3Byte.</div><div class="ttdef"><b>Definition:</b> pum_Constants.hpp:25</div></div>
@@ -162,13 +192,13 @@ $(document).ready(function(){initNavTree('pum___constants_8hpp_source.html','');
 <div class="ttc" id="anamespacepum_1_1_code_index_number_html_ad2131708743cddbac15581f9134fd565"><div class="ttname"><a href="namespacepum_1_1_code_index_number.html#ad2131708743cddbac15581f9134fd565">pum::CodeIndexNumber::CHANNEL_PRESSURE</a></div><div class="ttdeci">constexpr uint8_t CHANNEL_PRESSURE</div><div class="ttdoc">データ長2Byte</div><div class="ttdef"><b>Definition:</b> pum_Constants.hpp:31</div></div>
 <div class="ttc" id="anamespacepum_1_1_code_index_number_html_ada413bbb0b5f6dd6f9f5cc3b3b0dc43f"><div class="ttname"><a href="namespacepum_1_1_code_index_number.html#ada413bbb0b5f6dd6f9f5cc3b3b0dc43f">pum::CodeIndexNumber::SYSEX_END_2BYTES</a></div><div class="ttdeci">constexpr uint8_t SYSEX_END_2BYTES</div><div class="ttdoc">SysEx最終パケット データ長2Byte.</div><div class="ttdef"><b>Definition:</b> pum_Constants.hpp:24</div></div>
 <div class="ttc" id="anamespacepum_1_1_code_index_number_html_afa2c689e2d5171ea82c31e08a0d5fe34"><div class="ttname"><a href="namespacepum_1_1_code_index_number.html#afa2c689e2d5171ea82c31e08a0d5fe34">pum::CodeIndexNumber::SYSCOMMON_2BYTES</a></div><div class="ttdeci">constexpr uint8_t SYSCOMMON_2BYTES</div><div class="ttdoc">データ長2Byte</div><div class="ttdef"><b>Definition:</b> pum_Constants.hpp:20</div></div>
-<div class="ttc" id="anamespacepum_1_1_sys_ex_html_a897c2c45b22802c950e3f38ade94eef2"><div class="ttname"><a href="namespacepum_1_1_sys_ex.html#a897c2c45b22802c950e3f38ade94eef2">pum::SysEx::BEGIN</a></div><div class="ttdeci">constexpr uint8_t BEGIN</div><div class="ttdoc">SysEx開始</div><div class="ttdef"><b>Definition:</b> pum_Constants.hpp:41</div></div>
-<div class="ttc" id="anamespacepum_1_1_sys_ex_html_abdc4c94f66e6985cc5f7eabb2b11eb31"><div class="ttname"><a href="namespacepum_1_1_sys_ex.html#abdc4c94f66e6985cc5f7eabb2b11eb31">pum::SysEx::END</a></div><div class="ttdeci">constexpr uint8_t END</div><div class="ttdoc">SysEx終了</div><div class="ttdef"><b>Definition:</b> pum_Constants.hpp:42</div></div>
-<div class="ttc" id="apum___constants_8hpp_html_a1f76a8503d157d15257870ddc86e4e5c"><div class="ttname"><a href="pum___constants_8hpp.html#a1f76a8503d157d15257870ddc86e4e5c">pum::SysEx::DeviceID::JADE</a></div><div class="ttdeci">constexpr uint8_t JADE</div><div class="ttdoc">jade</div><div class="ttdef"><b>Definition:</b> pum_Constants.hpp:54</div></div>
-<div class="ttc" id="apum___constants_8hpp_html_a23046b4a325dca1d20064fe9e8642957"><div class="ttname"><a href="pum___constants_8hpp.html#a23046b4a325dca1d20064fe9e8642957">pum::SysEx::ManufacturerID::NON_REALTIME</a></div><div class="ttdeci">constexpr uint8_t NON_REALTIME</div><div class="ttdoc">Universal SysEx 非リアルタイム</div><div class="ttdef"><b>Definition:</b> pum_Constants.hpp:47</div></div>
-<div class="ttc" id="apum___constants_8hpp_html_a27fd6f4abb7c3f84cb2b7cdce485e8fd"><div class="ttname"><a href="pum___constants_8hpp.html#a27fd6f4abb7c3f84cb2b7cdce485e8fd">pum::SysEx::ManufacturerID::NON_COMMERCIAL</a></div><div class="ttdeci">constexpr uint8_t NON_COMMERCIAL</div><div class="ttdoc">Universal SysEx 非営利</div><div class="ttdef"><b>Definition:</b> pum_Constants.hpp:46</div></div>
-<div class="ttc" id="apum___constants_8hpp_html_a6c3e657bea43b13211d4f3f2bd090417"><div class="ttname"><a href="pum___constants_8hpp.html#a6c3e657bea43b13211d4f3f2bd090417">pum::SysEx::ManufacturerID::REALTIME</a></div><div class="ttdeci">constexpr uint8_t REALTIME</div><div class="ttdoc">Universal SysEx リアルタイム</div><div class="ttdef"><b>Definition:</b> pum_Constants.hpp:48</div></div>
-<div class="ttc" id="apum___constants_8hpp_html_a6ccfbdba75fa854878d1d560225fec54"><div class="ttname"><a href="pum___constants_8hpp.html#a6ccfbdba75fa854878d1d560225fec54">pum::SysEx::DeviceID::ALL</a></div><div class="ttdeci">constexpr uint8_t ALL</div><div class="ttdoc">全端末</div><div class="ttdef"><b>Definition:</b> pum_Constants.hpp:53</div></div>
+<div class="ttc" id="anamespacepum_1_1_sys_ex_html_a897c2c45b22802c950e3f38ade94eef2"><div class="ttname"><a href="namespacepum_1_1_sys_ex.html#a897c2c45b22802c950e3f38ade94eef2">pum::SysEx::BEGIN</a></div><div class="ttdeci">constexpr uint8_t BEGIN</div><div class="ttdoc">SysEx開始</div><div class="ttdef"><b>Definition:</b> pum_Constants.hpp:42</div></div>
+<div class="ttc" id="anamespacepum_1_1_sys_ex_html_abdc4c94f66e6985cc5f7eabb2b11eb31"><div class="ttname"><a href="namespacepum_1_1_sys_ex.html#abdc4c94f66e6985cc5f7eabb2b11eb31">pum::SysEx::END</a></div><div class="ttdeci">constexpr uint8_t END</div><div class="ttdoc">SysEx終了</div><div class="ttdef"><b>Definition:</b> pum_Constants.hpp:43</div></div>
+<div class="ttc" id="apum___constants_8hpp_html_a1f76a8503d157d15257870ddc86e4e5c"><div class="ttname"><a href="pum___constants_8hpp.html#a1f76a8503d157d15257870ddc86e4e5c">pum::SysEx::DeviceID::JADE</a></div><div class="ttdeci">constexpr uint8_t JADE</div><div class="ttdoc">jade</div><div class="ttdef"><b>Definition:</b> pum_Constants.hpp:55</div></div>
+<div class="ttc" id="apum___constants_8hpp_html_a23046b4a325dca1d20064fe9e8642957"><div class="ttname"><a href="pum___constants_8hpp.html#a23046b4a325dca1d20064fe9e8642957">pum::SysEx::ManufacturerID::NON_REALTIME</a></div><div class="ttdeci">constexpr uint8_t NON_REALTIME</div><div class="ttdoc">Universal SysEx Non realtime.</div><div class="ttdef"><b>Definition:</b> pum_Constants.hpp:48</div></div>
+<div class="ttc" id="apum___constants_8hpp_html_a27fd6f4abb7c3f84cb2b7cdce485e8fd"><div class="ttname"><a href="pum___constants_8hpp.html#a27fd6f4abb7c3f84cb2b7cdce485e8fd">pum::SysEx::ManufacturerID::NON_COMMERCIAL</a></div><div class="ttdeci">constexpr uint8_t NON_COMMERCIAL</div><div class="ttdoc">Universal SysEx Nonprofit.</div><div class="ttdef"><b>Definition:</b> pum_Constants.hpp:47</div></div>
+<div class="ttc" id="apum___constants_8hpp_html_a6c3e657bea43b13211d4f3f2bd090417"><div class="ttname"><a href="pum___constants_8hpp.html#a6c3e657bea43b13211d4f3f2bd090417">pum::SysEx::ManufacturerID::REALTIME</a></div><div class="ttdeci">constexpr uint8_t REALTIME</div><div class="ttdoc">Universal SysEx Realtime.</div><div class="ttdef"><b>Definition:</b> pum_Constants.hpp:49</div></div>
+<div class="ttc" id="apum___constants_8hpp_html_a6ccfbdba75fa854878d1d560225fec54"><div class="ttname"><a href="pum___constants_8hpp.html#a6ccfbdba75fa854878d1d560225fec54">pum::SysEx::DeviceID::ALL</a></div><div class="ttdeci">constexpr uint8_t ALL</div><div class="ttdoc">全端末</div><div class="ttdef"><b>Definition:</b> pum_Constants.hpp:54</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

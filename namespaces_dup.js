@@ -1,10 +1,7 @@
 var namespaces_dup =
 [
     [ "pum", null, [
-      [ "ChannelMessage", null, [
-        [ "NOTE_OFF", "pum___constants_8hpp.html#a774aece773f13a537a57b50b646bd476", null ],
-        [ "NOTE_ON", "pum___constants_8hpp.html#ad1525fc9fac2e430198f8c52bec27c00", null ]
-      ] ],
+      [ "ChannelMessage", "namespacepum_1_1_channel_message.html", "namespacepum_1_1_channel_message" ],
       [ "CodeIndexNumber", "namespacepum_1_1_code_index_number.html", [
         [ "CHANNEL_PRESSURE", "namespacepum_1_1_code_index_number.html#ad2131708743cddbac15581f9134fd565", null ],
         [ "CONTROL_CHANGE", "namespacepum_1_1_code_index_number.html#a1eaa5a80ce902369d19ab776750a4d34", null ],
@@ -34,13 +31,14 @@ var namespaces_dup =
         [ "BEGIN", "namespacepum_1_1_sys_ex.html#a897c2c45b22802c950e3f38ade94eef2", null ],
         [ "END", "namespacepum_1_1_sys_ex.html#abdc4c94f66e6985cc5f7eabb2b11eb31", null ]
       ] ],
-      [ "SystemRealtime", null, [
-        [ "ACTIVE_SENSING", "pum___constants_8hpp.html#a0c23533f79594546ee61e91f77a7190d", null ],
-        [ "CONTINUE", "pum___constants_8hpp.html#a16013bd198b127a808299e809bff6246", null ],
-        [ "START", "pum___constants_8hpp.html#ab81b154c4c7b96af55553ebb1c4ae027", null ],
-        [ "STOP", "pum___constants_8hpp.html#a134197181afeb6d255bfe3e8f488e7c2", null ],
-        [ "SYSTEM_RESET", "pum___constants_8hpp.html#ae5d7ae8191706f052d612a5fd0caa5b0", null ],
-        [ "TIMING_CLOCK", "pum___constants_8hpp.html#afa914f97f1fc56942ad989cfbd3bb92c", null ]
+      [ "SystemCommonMessage", "namespacepum_1_1_system_common_message.html", null ],
+      [ "SystemRealtime", "namespacepum_1_1_system_realtime.html", [
+        [ "ACTIVE_SENSING", "namespacepum_1_1_system_realtime.html#a0c23533f79594546ee61e91f77a7190d", null ],
+        [ "CONTINUE", "namespacepum_1_1_system_realtime.html#a16013bd198b127a808299e809bff6246", null ],
+        [ "START", "namespacepum_1_1_system_realtime.html#ab81b154c4c7b96af55553ebb1c4ae027", null ],
+        [ "STOP", "namespacepum_1_1_system_realtime.html#a134197181afeb6d255bfe3e8f488e7c2", null ],
+        [ "SYSTEM_RESET", "namespacepum_1_1_system_realtime.html#ae5d7ae8191706f052d612a5fd0caa5b0", null ],
+        [ "TIMING_CLOCK", "namespacepum_1_1_system_realtime.html#afa914f97f1fc56942ad989cfbd3bb92c", null ]
       ] ],
       [ "Generator", "classpum_1_1_generator.html", "classpum_1_1_generator" ],
       [ "Parser", "classpum_1_1_parser.html", "classpum_1_1_parser" ],

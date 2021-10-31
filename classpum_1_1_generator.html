@@ -109,19 +109,128 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a607a32f8d02f48236b4bd81c2f564451"><td class="memItemLeft" align="right" valign="top"><a id="a607a32f8d02f48236b4bd81c2f564451"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Generator</b> (const uint8_t channel, const uint8_t cableNumber)</td></tr>
 <tr class="separator:a607a32f8d02f48236b4bd81c2f564451"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6cc19257a20d4acbe0e8c187f3e8e372"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpum_1_1_generator.html#a6cc19257a20d4acbe0e8c187f3e8e372">setChannel</a> (const uint8_t newMIDIChannel)</td></tr>
-<tr class="memdesc:a6cc19257a20d4acbe0e8c187f3e8e372"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set MIDI channel.  <a href="classpum_1_1_generator.html#a6cc19257a20d4acbe0e8c187f3e8e372">More...</a><br /></td></tr>
-<tr class="separator:a6cc19257a20d4acbe0e8c187f3e8e372"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6431cf11d2325fc305fc5ccfefd739a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpum_1_1_generator.html#ad6431cf11d2325fc305fc5ccfefd739a">setChannel</a> (const uint8_t newMidiChannel)</td></tr>
+<tr class="memdesc:ad6431cf11d2325fc305fc5ccfefd739a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set MIDI channel.  <a href="classpum_1_1_generator.html#ad6431cf11d2325fc305fc5ccfefd739a">More...</a><br /></td></tr>
+<tr class="separator:ad6431cf11d2325fc305fc5ccfefd739a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8bbdfc4626bc1d2733ababcdffbe3c42"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpum_1_1_generator.html#a8bbdfc4626bc1d2733ababcdffbe3c42">makeNoteOn</a> (uint8_t packet[4], const uint8_t noteNumber, const uint8_t velocity)</td></tr>
-<tr class="memdesc:a8bbdfc4626bc1d2733ababcdffbe3c42"><td class="mdescLeft">&#160;</td><td class="mdescRight">MIDI note ON.  <a href="classpum_1_1_generator.html#a8bbdfc4626bc1d2733ababcdffbe3c42">More...</a><br /></td></tr>
+<tr class="memdesc:a8bbdfc4626bc1d2733ababcdffbe3c42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate USB-MIDI event packets with <a class="el" href="structpum_1_1_note.html" title="MIDI note.">Note</a> on.  <a href="classpum_1_1_generator.html#a8bbdfc4626bc1d2733ababcdffbe3c42">More...</a><br /></td></tr>
 <tr class="separator:a8bbdfc4626bc1d2733ababcdffbe3c42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20f66085aafba4bf41c5ac8b43eae715"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpum_1_1_generator.html#a20f66085aafba4bf41c5ac8b43eae715">makeNoteOff</a> (uint8_t packet[4], const uint8_t noteNumber)</td></tr>
-<tr class="memdesc:a20f66085aafba4bf41c5ac8b43eae715"><td class="mdescLeft">&#160;</td><td class="mdescRight">MIDI note OFF.  <a href="classpum_1_1_generator.html#a20f66085aafba4bf41c5ac8b43eae715">More...</a><br /></td></tr>
+<tr class="memdesc:a20f66085aafba4bf41c5ac8b43eae715"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate USB-MIDI event packets with <a class="el" href="structpum_1_1_note.html" title="MIDI note.">Note</a> off.  <a href="classpum_1_1_generator.html#a20f66085aafba4bf41c5ac8b43eae715">More...</a><br /></td></tr>
 <tr class="separator:a20f66085aafba4bf41c5ac8b43eae715"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b0de0e8e8d1b30f39c1e42bc7beff43"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpum_1_1_generator.html#a8b0de0e8e8d1b30f39c1e42bc7beff43">makeControlChange</a> (uint8_t packet[4], const uint8_t controlNumber, const uint8_t value)</td></tr>
+<tr class="memdesc:a8b0de0e8e8d1b30f39c1e42bc7beff43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate USB-MIDI event packets with Control Change (CC).  <a href="classpum_1_1_generator.html#a8b0de0e8e8d1b30f39c1e42bc7beff43">More...</a><br /></td></tr>
+<tr class="separator:a8b0de0e8e8d1b30f39c1e42bc7beff43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a804df4f7b8010fd6e83db162c1795933"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpum_1_1_generator.html#a804df4f7b8010fd6e83db162c1795933">makeProgramChange</a> (uint8_t packet[4], const uint8_t programNumber)</td></tr>
+<tr class="memdesc:a804df4f7b8010fd6e83db162c1795933"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate USB-MIDI event packets with Program Change.  <a href="classpum_1_1_generator.html#a804df4f7b8010fd6e83db162c1795933">More...</a><br /></td></tr>
+<tr class="separator:a804df4f7b8010fd6e83db162c1795933"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a2c0e9e295f91de32b91f0e2c6faba8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpum_1_1_generator.html#a2a2c0e9e295f91de32b91f0e2c6faba8">makeChannelPressure</a> (uint8_t packet[4], const uint8_t pressure)</td></tr>
+<tr class="memdesc:a2a2c0e9e295f91de32b91f0e2c6faba8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate USB-MIDI event packets with Channel Pressure.  <a href="classpum_1_1_generator.html#a2a2c0e9e295f91de32b91f0e2c6faba8">More...</a><br /></td></tr>
+<tr class="separator:a2a2c0e9e295f91de32b91f0e2c6faba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dcde4f01b202e738d7217483a3d5964"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpum_1_1_generator.html#a1dcde4f01b202e738d7217483a3d5964">makePitchBend</a> (uint8_t packet[4], const int16_t bend)</td></tr>
+<tr class="memdesc:a1dcde4f01b202e738d7217483a3d5964"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate USB-MIDI event packets with Pitch Bend.  <a href="classpum_1_1_generator.html#a1dcde4f01b202e738d7217483a3d5964">More...</a><br /></td></tr>
+<tr class="separator:a1dcde4f01b202e738d7217483a3d5964"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>USB-MIDI packet generator. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a2a2c0e9e295f91de32b91f0e2c6faba8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a2c0e9e295f91de32b91f0e2c6faba8">&#9670;&nbsp;</a></span>makeChannelPressure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pum::Generator::makeChannelPressure </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>packet</em>[4], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>pressure</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generate USB-MIDI event packets with Channel Pressure. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">packet</td><td>Array for storing USB-MIDI event packets. </td></tr>
+    <tr><td class="paramname">pressure</td><td>[0, 127] </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8b0de0e8e8d1b30f39c1e42bc7beff43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b0de0e8e8d1b30f39c1e42bc7beff43">&#9670;&nbsp;</a></span>makeControlChange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pum::Generator::makeControlChange </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>packet</em>[4], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>controlNumber</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generate USB-MIDI event packets with Control Change (CC). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">packet</td><td>Array for storing USB-MIDI event packets. </td></tr>
+    <tr><td class="paramname">controlNumber</td><td>[0, 119] </td></tr>
+    <tr><td class="paramname">value</td><td>[0, 127] </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a20f66085aafba4bf41c5ac8b43eae715"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a20f66085aafba4bf41c5ac8b43eae715">&#9670;&nbsp;</a></span>makeNoteOff()</h2>
 
@@ -156,10 +265,10 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>MIDI note OFF. </p>
+<p>Generate USB-MIDI event packets with <a class="el" href="structpum_1_1_note.html" title="MIDI note.">Note</a> off. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">packet</td><td></td></tr>
+    <tr><td class="paramname">packet</td><td>Array for storing USB-MIDI event packets. </td></tr>
     <tr><td class="paramname">noteNumber</td><td>[0, 127] </td></tr>
   </table>
   </dd>
@@ -208,10 +317,10 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>MIDI note ON. </p>
+<p>Generate USB-MIDI event packets with <a class="el" href="structpum_1_1_note.html" title="MIDI note.">Note</a> on. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">packet</td><td></td></tr>
+    <tr><td class="paramname">packet</td><td>Array for storing USB-MIDI event packets. </td></tr>
     <tr><td class="paramname">noteNumber</td><td>[0, 127] </td></tr>
     <tr><td class="paramname">velocity</td><td>[0, 127] </td></tr>
   </table>
@@ -220,8 +329,99 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a6cc19257a20d4acbe0e8c187f3e8e372"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6cc19257a20d4acbe0e8c187f3e8e372">&#9670;&nbsp;</a></span>setChannel()</h2>
+<a id="a1dcde4f01b202e738d7217483a3d5964"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dcde4f01b202e738d7217483a3d5964">&#9670;&nbsp;</a></span>makePitchBend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pum::Generator::makePitchBend </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>packet</em>[4], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int16_t&#160;</td>
+          <td class="paramname"><em>bend</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generate USB-MIDI event packets with Pitch Bend. </p>
+<p><br  />
+ </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">packet</td><td>Array for storing USB-MIDI event packets. </td></tr>
+    <tr><td class="paramname">bend</td><td>[-8192, 8191] </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a804df4f7b8010fd6e83db162c1795933"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a804df4f7b8010fd6e83db162c1795933">&#9670;&nbsp;</a></span>makeProgramChange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pum::Generator::makeProgramChange </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>packet</em>[4], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>programNumber</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generate USB-MIDI event packets with Program Change. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">packet</td><td>Array for storing USB-MIDI event packets. </td></tr>
+    <tr><td class="paramname">programNumber</td><td>[0, 127] </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad6431cf11d2325fc305fc5ccfefd739a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6431cf11d2325fc305fc5ccfefd739a">&#9670;&nbsp;</a></span>setChannel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -233,7 +433,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname">void pum::Generator::setChannel </td>
           <td>(</td>
           <td class="paramtype">const uint8_t&#160;</td>
-          <td class="paramname"><em>newMIDIChannel</em></td><td>)</td>
+          <td class="paramname"><em>newMidiChannel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>

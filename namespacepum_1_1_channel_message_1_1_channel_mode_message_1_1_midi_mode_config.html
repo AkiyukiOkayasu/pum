@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PUM: pum::SysEx Namespace Reference</title>
+<title>PUM: pum::ChannelMessage::ChannelModeMessage::MidiModeConfig Namespace Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search','.html');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('namespacepum_1_1_sys_ex.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('namespacepum_1_1_channel_message_1_1_channel_mode_message_1_1_midi_mode_config.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -94,33 +94,37 @@ $(document).ready(function(){initNavTree('namespacepum_1_1_sys_ex.html',''); ini
   <div class="summary">
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
-<div class="title">pum::SysEx Namespace Reference</div>  </div>
+<div class="title">pum::ChannelMessage::ChannelModeMessage::MidiModeConfig Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>MIDI <a class="el" href="namespacepum_1_1_sys_ex.html" title="MIDI SysEx.">SysEx</a>.  
-<a href="namespacepum_1_1_sys_ex.html#details">More...</a></p>
+<p>7CH、7DH、7EH、7FHの4つのチャンネルモードメッセージを使いオムニモード、発音数のオンオフを組み合わせることで、4種のMIDIモードを設定できる。 オムニモード - 7CH オムニオン、7DH オムニオフで設定。MIDIチャンネルを区別するかしないか。オフの場合、チャンネルに関係なく全ての情報を受信し処理、発音する。 発音数 - 7EH モノモードオン、7FH ポリモードオンで設定。どちらかを設定すると片方のモードは自動的にオフになる。単音しか出せないのか、和音が出せるのかを設定する。  
+<a href="namespacepum_1_1_channel_message_1_1_channel_mode_message_1_1_midi_mode_config.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a897c2c45b22802c950e3f38ade94eef2"><td class="memItemLeft" align="right" valign="top"><a id="a897c2c45b22802c950e3f38ade94eef2"></a>
-constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepum_1_1_sys_ex.html#a897c2c45b22802c950e3f38ade94eef2">BEGIN</a> = 0xF0</td></tr>
-<tr class="memdesc:a897c2c45b22802c950e3f38ade94eef2"><td class="mdescLeft">&#160;</td><td class="mdescRight">SysEx開始 <br /></td></tr>
-<tr class="separator:a897c2c45b22802c950e3f38ade94eef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abdc4c94f66e6985cc5f7eabb2b11eb31"><td class="memItemLeft" align="right" valign="top"><a id="abdc4c94f66e6985cc5f7eabb2b11eb31"></a>
-constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepum_1_1_sys_ex.html#abdc4c94f66e6985cc5f7eabb2b11eb31">END</a> = 0xF7</td></tr>
-<tr class="memdesc:abdc4c94f66e6985cc5f7eabb2b11eb31"><td class="mdescLeft">&#160;</td><td class="mdescRight">SysEx終了 <br /></td></tr>
-<tr class="separator:abdc4c94f66e6985cc5f7eabb2b11eb31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ab985e53b77591676c1699785eb72f5"><td class="memItemLeft" align="right" valign="top"><a id="a1ab985e53b77591676c1699785eb72f5"></a>
+constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>OMNI_ON</b> = 0x7D</td></tr>
+<tr class="separator:a1ab985e53b77591676c1699785eb72f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af034edb7dab64721a5b9033015708392"><td class="memItemLeft" align="right" valign="top"><a id="af034edb7dab64721a5b9033015708392"></a>
+constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>OMNI_OFF</b> = 0x7C</td></tr>
+<tr class="separator:af034edb7dab64721a5b9033015708392"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35871d9167d42c5a68479f62eb64ed53"><td class="memItemLeft" align="right" valign="top"><a id="a35871d9167d42c5a68479f62eb64ed53"></a>
+constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>POLY</b> = 0x7F</td></tr>
+<tr class="separator:a35871d9167d42c5a68479f62eb64ed53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbdd7a497fbac45853c3f066ebffebff"><td class="memItemLeft" align="right" valign="top"><a id="acbdd7a497fbac45853c3f066ebffebff"></a>
+constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>MONO</b> = 0x7E</td></tr>
+<tr class="separator:acbdd7a497fbac45853c3f066ebffebff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>MIDI <a class="el" href="namespacepum_1_1_sys_ex.html" title="MIDI SysEx.">SysEx</a>. </p>
-<p>0xF0, 0x7D, 0x7F, ~~~~~ , 0xF7 <a href="https://ja.wikipedia.org/wiki/MIDI#%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%A8%E3%82%AF%E3%82%B9%E3%82%AF%E3%83%AB%E3%83%BC%E3%82%B7%E3%83%96%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8">https://ja.wikipedia.org/wiki/MIDI#%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%A8%E3%82%AF%E3%82%B9%E3%82%AF%E3%83%AB%E3%83%BC%E3%82%B7%E3%83%96%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8</a> </p>
+<div class="textblock"><p>7CH、7DH、7EH、7FHの4つのチャンネルモードメッセージを使いオムニモード、発音数のオンオフを組み合わせることで、4種のMIDIモードを設定できる。 オムニモード - 7CH オムニオン、7DH オムニオフで設定。MIDIチャンネルを区別するかしないか。オフの場合、チャンネルに関係なく全ての情報を受信し処理、発音する。 発音数 - 7EH モノモードオン、7FH ポリモードオンで設定。どちらかを設定すると片方のモードは自動的にオフになる。単音しか出せないのか、和音が出せるのかを設定する。 </p>
+<p>MODE1 = OMNI_ON + POLY MIDIチャンネルを意識せず和音演奏ができるモード。 MODE2 = OMNI_ON + MONO MIDIチャンネルに関わらず、常に1音のみ鳴らすモード。 MODE3 = OMNI_OFF + POLY 一般的な送受信モード。MIDIチャンネルを区別し、各チャンネル毎に和音を用いた演奏が可能なモード。 MODE4 = OMNI_OFF + MONO チャンネルは区別するが、各チャンネル毎に1音しか出せないモード。たとえば6弦あるギターシンセサイザーの各弦を各チャンネルに割り当てる場合に使用する。この場合、単音で発声するチャンネルは6つとなるので、第2データバイトでは06Hを送信する。 </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>pum</b></li><li class="navelem"><a class="el" href="namespacepum_1_1_sys_ex.html">SysEx</a></li>
+    <li class="navelem"><b>pum</b></li><li class="navelem"><a class="el" href="namespacepum_1_1_channel_message.html">ChannelMessage</a></li><li class="navelem"><a class="el" href="namespacepum_1_1_channel_message_1_1_channel_mode_message.html">ChannelModeMessage</a></li><li class="navelem"><a class="el" href="namespacepum_1_1_channel_message_1_1_channel_mode_message_1_1_midi_mode_config.html">MidiModeConfig</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

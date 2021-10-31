@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PUM: pum::SysEx Namespace Reference</title>
+<title>PUM: pum::ChannelMessage::ChannelVoiceMessage Namespace Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search','.html');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('namespacepum_1_1_sys_ex.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('namespacepum_1_1_channel_message_1_1_channel_voice_message.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -94,33 +94,45 @@ $(document).ready(function(){initNavTree('namespacepum_1_1_sys_ex.html',''); ini
   <div class="summary">
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
-<div class="title">pum::SysEx Namespace Reference</div>  </div>
+<div class="title">pum::ChannelMessage::ChannelVoiceMessage Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>MIDI <a class="el" href="namespacepum_1_1_sys_ex.html" title="MIDI SysEx.">SysEx</a>.  
-<a href="namespacepum_1_1_sys_ex.html#details">More...</a></p>
+<p><a href="https://ja.wikipedia.org/wiki/MIDI#%E3%83%81%E3%83%A3%E3%83%B3%E3%83%8D%E3%83%AB%E3%83%9C%E3%82%A4%E3%82%B9%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8">https://ja.wikipedia.org/wiki/MIDI#%E3%83%81%E3%83%A3%E3%83%B3%E3%83%8D%E3%83%AB%E3%83%9C%E3%82%A4%E3%82%B9%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8</a>  
+<a href="namespacepum_1_1_channel_message_1_1_channel_voice_message.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a897c2c45b22802c950e3f38ade94eef2"><td class="memItemLeft" align="right" valign="top"><a id="a897c2c45b22802c950e3f38ade94eef2"></a>
-constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepum_1_1_sys_ex.html#a897c2c45b22802c950e3f38ade94eef2">BEGIN</a> = 0xF0</td></tr>
-<tr class="memdesc:a897c2c45b22802c950e3f38ade94eef2"><td class="mdescLeft">&#160;</td><td class="mdescRight">SysEx開始 <br /></td></tr>
-<tr class="separator:a897c2c45b22802c950e3f38ade94eef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abdc4c94f66e6985cc5f7eabb2b11eb31"><td class="memItemLeft" align="right" valign="top"><a id="abdc4c94f66e6985cc5f7eabb2b11eb31"></a>
-constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepum_1_1_sys_ex.html#abdc4c94f66e6985cc5f7eabb2b11eb31">END</a> = 0xF7</td></tr>
-<tr class="memdesc:abdc4c94f66e6985cc5f7eabb2b11eb31"><td class="mdescLeft">&#160;</td><td class="mdescRight">SysEx終了 <br /></td></tr>
-<tr class="separator:abdc4c94f66e6985cc5f7eabb2b11eb31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab51ee2567996642bfa750b369ed640de"><td class="memItemLeft" align="right" valign="top"><a id="ab51ee2567996642bfa750b369ed640de"></a>
+constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>NOTE_ON</b> = 0x90</td></tr>
+<tr class="separator:ab51ee2567996642bfa750b369ed640de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf818943fce26c6c6dbc71fe3c5dfcae"><td class="memItemLeft" align="right" valign="top"><a id="abf818943fce26c6c6dbc71fe3c5dfcae"></a>
+constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>NOTE_OFF</b> = 0x80</td></tr>
+<tr class="separator:abf818943fce26c6c6dbc71fe3c5dfcae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9cdd71317b62496e6d015a5cd277270"><td class="memItemLeft" align="right" valign="top"><a id="af9cdd71317b62496e6d015a5cd277270"></a>
+constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>POLYPHONIC_KEY_PRESSURE</b> = 0xA0</td></tr>
+<tr class="separator:af9cdd71317b62496e6d015a5cd277270"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5a21a870d81eb72e43c2dffe586a995"><td class="memItemLeft" align="right" valign="top"><a id="ab5a21a870d81eb72e43c2dffe586a995"></a>
+constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>CONTROL_CHANGE</b> = 0xB0</td></tr>
+<tr class="separator:ab5a21a870d81eb72e43c2dffe586a995"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf382ad0c9a7f2d70cb3da760deefc50"><td class="memItemLeft" align="right" valign="top"><a id="adf382ad0c9a7f2d70cb3da760deefc50"></a>
+constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>PROGRAM_CHANGE</b> = 0xC0</td></tr>
+<tr class="separator:adf382ad0c9a7f2d70cb3da760deefc50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87f7e88967702fefc77f8507d448b666"><td class="memItemLeft" align="right" valign="top"><a id="a87f7e88967702fefc77f8507d448b666"></a>
+constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>CHANNEL_PRESSURE</b> = 0xD0</td></tr>
+<tr class="separator:a87f7e88967702fefc77f8507d448b666"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affd1955f69130b635b82e8a32ebf81d8"><td class="memItemLeft" align="right" valign="top"><a id="affd1955f69130b635b82e8a32ebf81d8"></a>
+constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>PITCH_BEND</b> = 0xE0</td></tr>
+<tr class="separator:affd1955f69130b635b82e8a32ebf81d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>MIDI <a class="el" href="namespacepum_1_1_sys_ex.html" title="MIDI SysEx.">SysEx</a>. </p>
-<p>0xF0, 0x7D, 0x7F, ~~~~~ , 0xF7 <a href="https://ja.wikipedia.org/wiki/MIDI#%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%A8%E3%82%AF%E3%82%B9%E3%82%AF%E3%83%AB%E3%83%BC%E3%82%B7%E3%83%96%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8">https://ja.wikipedia.org/wiki/MIDI#%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%A8%E3%82%AF%E3%82%B9%E3%82%AF%E3%83%AB%E3%83%BC%E3%82%B7%E3%83%96%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8</a> </p>
+<div class="textblock"><p><a href="https://ja.wikipedia.org/wiki/MIDI#%E3%83%81%E3%83%A3%E3%83%B3%E3%83%8D%E3%83%AB%E3%83%9C%E3%82%A4%E3%82%B9%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8">https://ja.wikipedia.org/wiki/MIDI#%E3%83%81%E3%83%A3%E3%83%B3%E3%83%8D%E3%83%AB%E3%83%9C%E3%82%A4%E3%82%B9%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8</a> </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>pum</b></li><li class="navelem"><a class="el" href="namespacepum_1_1_sys_ex.html">SysEx</a></li>
+    <li class="navelem"><b>pum</b></li><li class="navelem"><a class="el" href="namespacepum_1_1_channel_message.html">ChannelMessage</a></li><li class="navelem"><a class="el" href="namespacepum_1_1_channel_message_1_1_channel_voice_message.html">ChannelVoiceMessage</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
