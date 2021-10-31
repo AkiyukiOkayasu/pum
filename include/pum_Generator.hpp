@@ -30,9 +30,10 @@ public:
     /** Set MIDI channel.    
         @param newMIDIChannel [0, 15]
     */
-    void setChannel (const uint8_t newMIDIChannel)
+    void setChannel (const uint8_t newMidiChannel)
     {
-        channel = newMIDIChannel;
+        assert (newMidiChannel < 16);
+        channel = newMidiChannel;
     }
 
     /** MIDI note ON.
