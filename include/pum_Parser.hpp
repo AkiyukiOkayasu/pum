@@ -26,7 +26,7 @@ public:
     void parse (const uint8_t packet[4])
     {
         const uint8_t codeIndex = codeIndexNumber (packet[0]);
-        const uint8_t cn = cableNumber (packet[0]);
+        const uint8_t cn = extractCableNumber (packet[0]);
         const uint8_t statusByte = packet[1];
         const uint8_t channel = midiCh (statusByte);
 
@@ -216,14 +216,14 @@ private:
         return statusByte & 0x0F;
     }
 
-    /**
-      USB-MIDIイベントパケットのbyte0（midiEventPacket_tのheader)からCable
-     Numberを取得する https://pcm1723.hateblo.jp/entry/20150109/1420819489
-      @param header midiEventPacket_t の header
-      @return uint8_t USB-MIDI Cable Number
-      @note USB-MIDIデバイスが複数使用されているときのインデックスとして利用する
+    /** Extract Cable Number from Header (Byte0) of USB-MIDI event packet.
+        https://pcm1723.hateblo.jp/entry/20150109/1420819489
+        
+        @param header Byte0 of USB-MIDI event packet
+        @return uint8_t USB-MIDI Cable Number [0, 15]
+        @note USB-MIDIデバイスが複数使用されているときのインデックスとして利用する
     */
-    constexpr uint8_t cableNumber (const uint8_t header) const
+    constexpr uint8_t extractCableNumber (const uint8_t header) const
     {
         // Header上位4bit: CableNumber
         return (header >> 4) & 0x0F;
