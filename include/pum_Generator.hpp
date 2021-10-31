@@ -65,6 +65,18 @@ public:
     }
 
 
+    /** Generate USB-MIDI event packets with Program Change.
+        @param packet Array for storing USB-MIDI event packets.
+        @param programNumber [0, 127]
+    */
+    void makeProgramChange (uint8_t packet[4], const uint8_t programNumber)
+    {
+        assert (programNumber < 128);
+        packet[0] = makeHeader (CodeIndexNumber::PROGRAM_CHANGE);
+        packet[1] = ChannelMessage::ChannelVoiceMessage::PROGRAM_CHANGE | channel;
+        packet[2] = programNumber;
+    }
+
     /** Generate USB-MIDI event packets with Channel Pressure.
         @param packet Array for storing USB-MIDI event packets.
         @param pressure [0, 127]
