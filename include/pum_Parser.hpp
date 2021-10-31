@@ -244,9 +244,12 @@ private:
         return header & 0x0F;
     }
 
-    void pushSysEx (uint8_t d)
+    /** Add the incoming SysEx to the array.
+        @param dataToAdd Incoming SysEx data byte
+    */
+    void pushSysEx (const uint8_t dataToAdd)
     {
-        sysExData[sysExIndex] = d;
+        sysExData[sysExIndex] = dataToAdd;
         sysExIndex++;
     }
 
