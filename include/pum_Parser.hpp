@@ -139,7 +139,7 @@ public:
             case CodeIndexNumber::PITCH_BEND:
                 if (onPitchBend)
                 {
-                    const PitchBend pb = { mergeMIDIBytes (packet[2], packet[3]), channel };
+                    const PitchBend pb = { compute14bitValue (packet[2], packet[3]), channel };
                     onPitchBend (pb);
                 }
                 break;
@@ -250,13 +250,13 @@ private:
         sysExIndex++;
     }
 
-    /** 2つの7bit数を合わせて[-8192, +8191]の数を返す.
-        PitchBendで使う.
+    /** Bitwise compute two MIDI bytes and return a 14-bit signed number.
         https://www.g200kg.com/jp/docs/dic/pitchbend.html        
         @param lsb 7bit [0, 127]
         @param msb 7bit [0, 127]        
+        @return 14bit signed int [-8192, 8191]
     */
-    int16_t mergeMIDIBytes (uint8_t lsb, uint8_t msb)
+    constexpr int16_t compute14bitValue (const uint8_t lsb, const uint8_t msb) const
     {
         uint16_t v = (static_cast<uint16_t> (msb) << 9) | (static_cast<uint16_t> (lsb) << 2);
         return (static_cast<int16_t> (v) >> 2);
