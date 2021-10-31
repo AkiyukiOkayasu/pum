@@ -67,7 +67,6 @@ public:
 private:
     uint8_t makeHeader (const uint8_t cin)
     {
-        assert (cableNumber < 16);
         assert (cin < 16);
         return (cableNumber << 4) | (cin & 0xF);
     }
