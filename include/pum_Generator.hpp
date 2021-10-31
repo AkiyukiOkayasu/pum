@@ -46,7 +46,7 @@ public:
         assert (noteNumber < 128);
         assert (velocity < 128);
         packet[0] = makeHeader (CodeIndexNumber::NOTE_ON);
-        packet[1] = ChannelMessage::NOTE_ON | channel;
+        packet[1] = ChannelMessage::ChannelVoiceMessage::NOTE_ON | channel;
         packet[2] = noteNumber;
         packet[3] = velocity;
     }
@@ -59,7 +59,7 @@ public:
     {
         assert (noteNumber < 128);
         packet[0] = makeHeader (CodeIndexNumber::NOTE_OFF);
-        packet[1] = ChannelMessage::NOTE_OFF | channel;
+        packet[1] = ChannelMessage::ChannelVoiceMessage::NOTE_OFF | channel;
         packet[2] = noteNumber;
         packet[3] = 0; ///< velocity 0
     }
