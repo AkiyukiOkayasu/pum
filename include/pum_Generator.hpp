@@ -1,4 +1,4 @@
-/**  
+/** 
     @file pum_Generator.hpp
     @author Akiyuki Okayasu (akiyuki.okayasu@gmail.com)
     @copyright Copyright (c) 2021 - Akiyuki Okayasu
@@ -15,7 +15,7 @@
 
 namespace pum
 {
-/// USB-MIDI packet generator.
+/// USB-MIDI event packet generator.
 class Generator
 {
 public:

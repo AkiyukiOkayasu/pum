@@ -17,6 +17,7 @@
 
 namespace pum
 {
+/// USB-MIDI event packet parser.
 class Parser
 {
 public:
