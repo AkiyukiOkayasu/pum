@@ -35,6 +35,7 @@ namespace CodeIndexNumber
 
 /** MIDI SysEx.
     0xF0, 0x7D, 0x7F, ~~~~~ , 0xF7
+    https://ja.wikipedia.org/wiki/MIDI#%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%A8%E3%82%AF%E3%82%B9%E3%82%AF%E3%83%AB%E3%83%BC%E3%82%B7%E3%83%96%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8
 */
 namespace SysEx
 {
@@ -43,9 +44,9 @@ namespace SysEx
 
     namespace ManufacturerID
     {
-        inline constexpr uint8_t NON_COMMERCIAL = 0x7D; ///< Universal SysEx 非営利
-        inline constexpr uint8_t NON_REALTIME = 0x7E;   ///< Universal SysEx 非リアルタイム
-        inline constexpr uint8_t REALTIME = 0x7F;       ///< Universal SysEx リアルタイム
+        inline constexpr uint8_t NON_COMMERCIAL = 0x7D; ///< Universal SysEx Nonprofit
+        inline constexpr uint8_t NON_REALTIME = 0x7E;   ///< Universal SysEx Non realtime
+        inline constexpr uint8_t REALTIME = 0x7F;       ///< Universal SysEx Realtime
     }                                                   // namespace ManufacturerID
 
     namespace DeviceID
@@ -61,6 +62,7 @@ namespace ChannelMessage
     inline constexpr uint8_t NOTE_OFF = 0x80;
 } // namespace ChannelMessage
 
+///https://ja.wikipedia.org/wiki/MIDI#%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%83%AA%E3%82%A2%E3%83%AB%E3%82%BF%E3%82%A4%E3%83%A0%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8
 namespace SystemRealtime
 {
     inline constexpr uint8_t TIMING_CLOCK = 0xF8;
