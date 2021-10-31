@@ -28,7 +28,7 @@ public:
         const uint8_t codeIndex = codeIndexNumber (packet[0]);
         const uint8_t cn = extractCableNumber (packet[0]);
         const uint8_t statusByte = packet[1];
-        const uint8_t channel = midiCh (statusByte);
+        const uint8_t channel = extractMidiChannel (statusByte);
 
         switch (codeIndex)
         {
@@ -210,7 +210,11 @@ public:
     std::function<void (PitchBend)> onPitchBend;
 
 private:
-    constexpr uint8_t midiCh (const uint8_t statusByte) const
+    /** Extract MIDI channel from MIDI status byte.
+        @param statusByte MIDI status byte
+        @return constexpr uint8_t MIDI channel [0, 15]
+    */
+    constexpr uint8_t extractMidiChannel (const uint8_t statusByte) const
     {
         // MIDI StatusByte下位4bit: MIDI channel
         return statusByte & 0x0F;
