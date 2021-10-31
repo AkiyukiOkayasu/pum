@@ -72,4 +72,13 @@ namespace SystemRealtime
     inline constexpr uint8_t ACTIVE_SENSING = 0xFE;
     inline constexpr uint8_t SYSTEM_RESET = 0xFF;
 } // namespace SystemRealtime
+
+/** SystemCommon message 
+    @TODO implement
+    https://ja.wikipedia.org/wiki/MIDI#%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%B3%E3%83%A2%E3%83%B3%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8
+*/
+namespace SystemCommonMessage
+{
+
+}
 } // namespace pum
