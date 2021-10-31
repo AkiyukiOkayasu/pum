@@ -73,7 +73,8 @@
         "stack": "cpp",
         "thread": "cpp",
         "variant": "cpp",
-        "*.csv": "cpp"
+        "*.csv": "cpp",
+        "cassert": "cpp"
     },
     "cSpell.words": [
         "Alaw",
