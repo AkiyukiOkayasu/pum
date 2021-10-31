@@ -65,6 +65,18 @@ public:
     }
 
 
+    /** Generate USB-MIDI event packets with Channel Pressure.
+        @param packet Array for storing USB-MIDI event packets.
+        @param pressure [0, 127]
+    */
+    void makeChannelPressure (uint8_t packet[4], const uint8_t pressure)
+    {
+        assert (pressure < 128);
+        packet[0] = makeHeader (CodeIndexNumber::CHANNEL_PRESSURE);
+        packet[1] = ChannelMessage::ChannelVoiceMessage::CHANNEL_PRESSURE | channel;
+        packet[2] = pressure;
+    }
+
     /** Generate USB-MIDI event packets with Pitch Bend.    
         @param packet Array for storing USB-MIDI event packets.
         @param bend [-8192, 8191]
