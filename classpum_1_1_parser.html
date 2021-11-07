@@ -115,31 +115,90 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>parse</b> (const uint
 <tr class="memitem:a22c6b3a2a0a4871894e2b1bc3810ef4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpum_1_1_parser.html#a22c6b3a2a0a4871894e2b1bc3810ef4f">setNoteOffCallback</a> (std::function&lt; void(<a class="el" href="structpum_1_1_note.html">Note</a>)&gt; f)</td></tr>
 <tr class="memdesc:a22c6b3a2a0a4871894e2b1bc3810ef4f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structpum_1_1_note.html" title="MIDI note.">Note</a> off callback.  <a href="classpum_1_1_parser.html#a22c6b3a2a0a4871894e2b1bc3810ef4f">More...</a><br /></td></tr>
 <tr class="separator:a22c6b3a2a0a4871894e2b1bc3810ef4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2dc1ee5534f9aba19f9ab8f08da0120"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpum_1_1_parser.html#ad2dc1ee5534f9aba19f9ab8f08da0120">setOnControlChangeCallback</a> (std::function&lt; void(<a class="el" href="structpum_1_1_control_change.html">ControlChange</a>)&gt; f)</td></tr>
-<tr class="memdesc:ad2dc1ee5534f9aba19f9ab8f08da0120"><td class="mdescLeft">&#160;</td><td class="mdescRight">Control change callback.  <a href="classpum_1_1_parser.html#ad2dc1ee5534f9aba19f9ab8f08da0120">More...</a><br /></td></tr>
-<tr class="separator:ad2dc1ee5534f9aba19f9ab8f08da0120"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03049fd6a83171581c434226a6ab00e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpum_1_1_parser.html#a03049fd6a83171581c434226a6ab00e6">setOnSysExCallback</a> (std::function&lt; void(const uint8_t[], const uint8_t)&gt; f)</td></tr>
-<tr class="memdesc:a03049fd6a83171581c434226a6ab00e6"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="namespacepum_1_1_sys_ex.html" title="MIDI SysEx.">SysEx</a> callback.  <a href="classpum_1_1_parser.html#a03049fd6a83171581c434226a6ab00e6">More...</a><br /></td></tr>
-<tr class="separator:a03049fd6a83171581c434226a6ab00e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08919f1e4de7a7178690943c866cae97"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpum_1_1_parser.html#a08919f1e4de7a7178690943c866cae97">setOnSystemRealtimeCallback</a> (std::function&lt; void(uint8_t byte)&gt; f)</td></tr>
-<tr class="memdesc:a08919f1e4de7a7178690943c866cae97"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="namespacepum_1_1_system_realtime.html" title="https://ja.wikipedia.org/wiki/MIDI#%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%83%AA%E3%82%A2%E3%83%AB%E3...">SystemRealtime</a> callback.  <a href="classpum_1_1_parser.html#a08919f1e4de7a7178690943c866cae97">More...</a><br /></td></tr>
-<tr class="separator:a08919f1e4de7a7178690943c866cae97"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74406d3f6bb244bfe1621fb6083bf2a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpum_1_1_parser.html#a74406d3f6bb244bfe1621fb6083bf2a9">setOnProgramChange</a> (std::function&lt; void(<a class="el" href="structpum_1_1_program_change.html">ProgramChange</a>)&gt; f)</td></tr>
-<tr class="memdesc:a74406d3f6bb244bfe1621fb6083bf2a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Program change callback.  <a href="classpum_1_1_parser.html#a74406d3f6bb244bfe1621fb6083bf2a9">More...</a><br /></td></tr>
-<tr class="separator:a74406d3f6bb244bfe1621fb6083bf2a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a683f72b50f3b1e518d37da4020aaa224"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpum_1_1_parser.html#a683f72b50f3b1e518d37da4020aaa224">setOnChannelPressure</a> (std::function&lt; void(<a class="el" href="structpum_1_1_channel_pressure.html">ChannelPressure</a>)&gt; f)</td></tr>
-<tr class="memdesc:a683f72b50f3b1e518d37da4020aaa224"><td class="mdescLeft">&#160;</td><td class="mdescRight">Channel pressure callback.  <a href="classpum_1_1_parser.html#a683f72b50f3b1e518d37da4020aaa224">More...</a><br /></td></tr>
-<tr class="separator:a683f72b50f3b1e518d37da4020aaa224"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14bb5fa39fe24aad838a33f641bfeaef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpum_1_1_parser.html#a14bb5fa39fe24aad838a33f641bfeaef">setOnPolyphonicKeyPressure</a> (std::function&lt; void(<a class="el" href="structpum_1_1_polyphonic_key_pressure.html">PolyphonicKeyPressure</a>)&gt; f)</td></tr>
-<tr class="memdesc:a14bb5fa39fe24aad838a33f641bfeaef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polyphonic key pressure callback.  <a href="classpum_1_1_parser.html#a14bb5fa39fe24aad838a33f641bfeaef">More...</a><br /></td></tr>
-<tr class="separator:a14bb5fa39fe24aad838a33f641bfeaef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa455d3832ab58e0fe163e5f98a2bc712"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpum_1_1_parser.html#aa455d3832ab58e0fe163e5f98a2bc712">setOnPitchBend</a> (std::function&lt; void(<a class="el" href="structpum_1_1_pitch_bend.html">PitchBend</a>)&gt; f)</td></tr>
-<tr class="memdesc:aa455d3832ab58e0fe163e5f98a2bc712"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polyphonic key pressure callback.  <a href="classpum_1_1_parser.html#aa455d3832ab58e0fe163e5f98a2bc712">More...</a><br /></td></tr>
-<tr class="separator:aa455d3832ab58e0fe163e5f98a2bc712"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d4fbafbe629821d3ef5c3fb18c787b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpum_1_1_parser.html#a2d4fbafbe629821d3ef5c3fb18c787b9">setControlChangeCallback</a> (std::function&lt; void(<a class="el" href="structpum_1_1_control_change.html">ControlChange</a>)&gt; f)</td></tr>
+<tr class="memdesc:a2d4fbafbe629821d3ef5c3fb18c787b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Control change callback.  <a href="classpum_1_1_parser.html#a2d4fbafbe629821d3ef5c3fb18c787b9">More...</a><br /></td></tr>
+<tr class="separator:a2d4fbafbe629821d3ef5c3fb18c787b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43453e9625d6c0678aa87019dae1382e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpum_1_1_parser.html#a43453e9625d6c0678aa87019dae1382e">setSysExCallback</a> (std::function&lt; void(const uint8_t[], const uint8_t)&gt; f)</td></tr>
+<tr class="memdesc:a43453e9625d6c0678aa87019dae1382e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="namespacepum_1_1_sys_ex.html" title="MIDI SysEx.">SysEx</a> callback.  <a href="classpum_1_1_parser.html#a43453e9625d6c0678aa87019dae1382e">More...</a><br /></td></tr>
+<tr class="separator:a43453e9625d6c0678aa87019dae1382e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98c363554abc77c44ab7f916041a7ff8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpum_1_1_parser.html#a98c363554abc77c44ab7f916041a7ff8">setSystemRealtimeCallback</a> (std::function&lt; void(uint8_t byte)&gt; f)</td></tr>
+<tr class="memdesc:a98c363554abc77c44ab7f916041a7ff8"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="namespacepum_1_1_system_realtime.html" title="https://ja.wikipedia.org/wiki/MIDI#%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%83%AA%E3%82%A2%E3%83%AB%E3...">SystemRealtime</a> callback.  <a href="classpum_1_1_parser.html#a98c363554abc77c44ab7f916041a7ff8">More...</a><br /></td></tr>
+<tr class="separator:a98c363554abc77c44ab7f916041a7ff8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3206aa46716beee13dc621889ba7e8d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpum_1_1_parser.html#a3206aa46716beee13dc621889ba7e8d4">setProgramChangeCallback</a> (std::function&lt; void(<a class="el" href="structpum_1_1_program_change.html">ProgramChange</a>)&gt; f)</td></tr>
+<tr class="memdesc:a3206aa46716beee13dc621889ba7e8d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Program change callback.  <a href="classpum_1_1_parser.html#a3206aa46716beee13dc621889ba7e8d4">More...</a><br /></td></tr>
+<tr class="separator:a3206aa46716beee13dc621889ba7e8d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a229bd66e5753cd5c0519f0045bb33ecc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpum_1_1_parser.html#a229bd66e5753cd5c0519f0045bb33ecc">setChannelPressureCallback</a> (std::function&lt; void(<a class="el" href="structpum_1_1_channel_pressure.html">ChannelPressure</a>)&gt; f)</td></tr>
+<tr class="memdesc:a229bd66e5753cd5c0519f0045bb33ecc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Channel pressure callback.  <a href="classpum_1_1_parser.html#a229bd66e5753cd5c0519f0045bb33ecc">More...</a><br /></td></tr>
+<tr class="separator:a229bd66e5753cd5c0519f0045bb33ecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37eebff43f057eefdccc77f963fb77da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpum_1_1_parser.html#a37eebff43f057eefdccc77f963fb77da">setPolyphonicKeyPressureCallback</a> (std::function&lt; void(<a class="el" href="structpum_1_1_polyphonic_key_pressure.html">PolyphonicKeyPressure</a>)&gt; f)</td></tr>
+<tr class="memdesc:a37eebff43f057eefdccc77f963fb77da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polyphonic key pressure callback.  <a href="classpum_1_1_parser.html#a37eebff43f057eefdccc77f963fb77da">More...</a><br /></td></tr>
+<tr class="separator:a37eebff43f057eefdccc77f963fb77da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f6edc883f8601143cb8151363095f91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpum_1_1_parser.html#a1f6edc883f8601143cb8151363095f91">setPitchBendCallback</a> (std::function&lt; void(<a class="el" href="structpum_1_1_pitch_bend.html">PitchBend</a>)&gt; f)</td></tr>
+<tr class="memdesc:a1f6edc883f8601143cb8151363095f91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polyphonic key pressure callback.  <a href="classpum_1_1_parser.html#a1f6edc883f8601143cb8151363095f91">More...</a><br /></td></tr>
+<tr class="separator:a1f6edc883f8601143cb8151363095f91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>USB-MIDI event packet parser. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a229bd66e5753cd5c0519f0045bb33ecc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a229bd66e5753cd5c0519f0045bb33ecc">&#9670;&nbsp;</a></span>setChannelPressureCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pum::Parser::setChannelPressureCallback </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(<a class="el" href="structpum_1_1_channel_pressure.html">ChannelPressure</a>)&gt;&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Channel pressure callback. </p>
+<p>You can assign a lambda to this callback object to have it called when the MIDI Channel pressure is come. </p>
+
+</div>
+</div>
+<a id="a2d4fbafbe629821d3ef5c3fb18c787b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d4fbafbe629821d3ef5c3fb18c787b9">&#9670;&nbsp;</a></span>setControlChangeCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pum::Parser::setControlChangeCallback </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(<a class="el" href="structpum_1_1_control_change.html">ControlChange</a>)&gt;&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Control change callback. </p>
+<p>You can assign a lambda to this callback object to have it called when the MIDI control change is come. <br  />
+ </p>
+
+</div>
+</div>
 <a id="a22c6b3a2a0a4871894e2b1bc3810ef4f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a22c6b3a2a0a4871894e2b1bc3810ef4f">&#9670;&nbsp;</a></span>setNoteOffCallback()</h2>
 
@@ -200,8 +259,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>parse</b> (const uint
 
 </div>
 </div>
-<a id="a683f72b50f3b1e518d37da4020aaa224"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a683f72b50f3b1e518d37da4020aaa224">&#9670;&nbsp;</a></span>setOnChannelPressure()</h2>
+<a id="a1f6edc883f8601143cb8151363095f91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f6edc883f8601143cb8151363095f91">&#9670;&nbsp;</a></span>setPitchBendCallback()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -210,66 +269,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>parse</b> (const uint
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void pum::Parser::setOnChannelPressure </td>
-          <td>(</td>
-          <td class="paramtype">std::function&lt; void(<a class="el" href="structpum_1_1_channel_pressure.html">ChannelPressure</a>)&gt;&#160;</td>
-          <td class="paramname"><em>f</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Channel pressure callback. </p>
-<p>You can assign a lambda to this callback object to have it called when the MIDI Channel pressure is come. </p>
-
-</div>
-</div>
-<a id="ad2dc1ee5534f9aba19f9ab8f08da0120"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2dc1ee5534f9aba19f9ab8f08da0120">&#9670;&nbsp;</a></span>setOnControlChangeCallback()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void pum::Parser::setOnControlChangeCallback </td>
-          <td>(</td>
-          <td class="paramtype">std::function&lt; void(<a class="el" href="structpum_1_1_control_change.html">ControlChange</a>)&gt;&#160;</td>
-          <td class="paramname"><em>f</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Control change callback. </p>
-<p>You can assign a lambda to this callback object to have it called when the MIDI control change is come. <br  />
- </p>
-
-</div>
-</div>
-<a id="aa455d3832ab58e0fe163e5f98a2bc712"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa455d3832ab58e0fe163e5f98a2bc712">&#9670;&nbsp;</a></span>setOnPitchBend()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void pum::Parser::setOnPitchBend </td>
+          <td class="memname">void pum::Parser::setPitchBendCallback </td>
           <td>(</td>
           <td class="paramtype">std::function&lt; void(<a class="el" href="structpum_1_1_pitch_bend.html">PitchBend</a>)&gt;&#160;</td>
           <td class="paramname"><em>f</em></td><td>)</td>
@@ -288,8 +288,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>parse</b> (const uint
 
 </div>
 </div>
-<a id="a14bb5fa39fe24aad838a33f641bfeaef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a14bb5fa39fe24aad838a33f641bfeaef">&#9670;&nbsp;</a></span>setOnPolyphonicKeyPressure()</h2>
+<a id="a37eebff43f057eefdccc77f963fb77da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37eebff43f057eefdccc77f963fb77da">&#9670;&nbsp;</a></span>setPolyphonicKeyPressureCallback()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -298,7 +298,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>parse</b> (const uint
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void pum::Parser::setOnPolyphonicKeyPressure </td>
+          <td class="memname">void pum::Parser::setPolyphonicKeyPressureCallback </td>
           <td>(</td>
           <td class="paramtype">std::function&lt; void(<a class="el" href="structpum_1_1_polyphonic_key_pressure.html">PolyphonicKeyPressure</a>)&gt;&#160;</td>
           <td class="paramname"><em>f</em></td><td>)</td>
@@ -317,8 +317,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>parse</b> (const uint
 
 </div>
 </div>
-<a id="a74406d3f6bb244bfe1621fb6083bf2a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a74406d3f6bb244bfe1621fb6083bf2a9">&#9670;&nbsp;</a></span>setOnProgramChange()</h2>
+<a id="a3206aa46716beee13dc621889ba7e8d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3206aa46716beee13dc621889ba7e8d4">&#9670;&nbsp;</a></span>setProgramChangeCallback()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -327,7 +327,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>parse</b> (const uint
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void pum::Parser::setOnProgramChange </td>
+          <td class="memname">void pum::Parser::setProgramChangeCallback </td>
           <td>(</td>
           <td class="paramtype">std::function&lt; void(<a class="el" href="structpum_1_1_program_change.html">ProgramChange</a>)&gt;&#160;</td>
           <td class="paramname"><em>f</em></td><td>)</td>
@@ -346,8 +346,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>parse</b> (const uint
 
 </div>
 </div>
-<a id="a03049fd6a83171581c434226a6ab00e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a03049fd6a83171581c434226a6ab00e6">&#9670;&nbsp;</a></span>setOnSysExCallback()</h2>
+<a id="a43453e9625d6c0678aa87019dae1382e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43453e9625d6c0678aa87019dae1382e">&#9670;&nbsp;</a></span>setSysExCallback()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -356,7 +356,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>parse</b> (const uint
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void pum::Parser::setOnSysExCallback </td>
+          <td class="memname">void pum::Parser::setSysExCallback </td>
           <td>(</td>
           <td class="paramtype">std::function&lt; void(const uint8_t[], const uint8_t)&gt;&#160;</td>
           <td class="paramname"><em>f</em></td><td>)</td>
@@ -381,8 +381,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>parse</b> (const uint
 
 </div>
 </div>
-<a id="a08919f1e4de7a7178690943c866cae97"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08919f1e4de7a7178690943c866cae97">&#9670;&nbsp;</a></span>setOnSystemRealtimeCallback()</h2>
+<a id="a98c363554abc77c44ab7f916041a7ff8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98c363554abc77c44ab7f916041a7ff8">&#9670;&nbsp;</a></span>setSystemRealtimeCallback()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -391,7 +391,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>parse</b> (const uint
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void pum::Parser::setOnSystemRealtimeCallback </td>
+          <td class="memname">void pum::Parser::setSystemRealtimeCallback </td>
           <td>(</td>
           <td class="paramtype">std::function&lt; void(uint8_t byte)&gt;&#160;</td>
           <td class="paramname"><em>f</em></td><td>)</td>
