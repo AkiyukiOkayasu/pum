@@ -177,7 +177,7 @@ public:
       You can assign a lambda to this callback object to have it called when the
      MIDI control change is come.      
     */
-    void setOnControlChangeCallback (std::function<void (ControlChange)> f)
+    void setControlChangeCallback (std::function<void (ControlChange)> f)
     {
         onControlChange = f;
     }
@@ -188,7 +188,7 @@ public:
       @param SysExByteArray
       @param SysExByteArraySize
     */
-    void setOnSysExCallback (std::function<void (const uint8_t[], const uint8_t)> f)
+    void setSysExCallback (std::function<void (const uint8_t[], const uint8_t)> f)
     {
         onSysEx = f;
     }
@@ -196,7 +196,7 @@ public:
     /** SystemRealtime callback.
         @param byte SystemRealtime is 1byte message.      
     */
-    void setOnSystemRealtimeCallback (std::function<void (uint8_t byte)> f)
+    void setSystemRealtimeCallback (std::function<void (uint8_t byte)> f)
     {
         onSystemRealtime = f;
     }
@@ -205,7 +205,7 @@ public:
         You can assign a lambda to this callback object to have it called when the
      MIDI Program change is come.
     */
-    void setOnProgramChange (std::function<void (ProgramChange)> f)
+    void setProgramChangeCallback (std::function<void (ProgramChange)> f)
     {
         onProgramChange = f;
     }
@@ -214,7 +214,7 @@ public:
         You can assign a lambda to this callback object to have it called when the
      MIDI Channel pressure is come.
     */
-    void setOnChannelPressure (std::function<void (ChannelPressure)> f)
+    void setChannelPressureCallback (std::function<void (ChannelPressure)> f)
     {
         onChannelPressure = f;
     }
@@ -223,7 +223,7 @@ public:
         You can assign a lambda to this callback object to have it called when the
      MIDI Polyphonic key pressure is come.
     */
-    void setOnPolyphonicKeyPressure (std::function<void (PolyphonicKeyPressure)> f)
+    void setPolyphonicKeyPressureCallback (std::function<void (PolyphonicKeyPressure)> f)
     {
         onPolyphonicKeyPressure = f;
     }
@@ -232,7 +232,7 @@ public:
         You can assign a lambda to this callback object to have it called when the
      MIDI Pitch bend is come.
     */
-    void setOnPitchBend (std::function<void (PitchBend)> f)
+    void setPitchBendCallback (std::function<void (PitchBend)> f)
     {
         onPitchBend = f;
     }
