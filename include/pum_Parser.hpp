@@ -159,19 +159,28 @@ public:
         You can assign a lambda to this callback object to have it called when the
      MIDI note on is come.      
     */
-    std::function<void (Note)> onNoteOn;
+    void setNoteOnCallback (std::function<void (Note)> f)
+    {
+        onNoteOn = f;
+    }
 
     /** Note off callback.
         You can assign a lambda to this callback object to have it called when the
      MIDI note off is come.      
     */
-    std::function<void (Note)> onNoteOff;
+    void setNoteOffCallback (std::function<void (Note)> f)
+    {
+        onNoteOff = f;
+    }
 
     /** Control change callback.
       You can assign a lambda to this callback object to have it called when the
      MIDI control change is come.      
     */
-    std::function<void (ControlChange)> onControlChange;
+    void setOnControlChangeCallback (std::function<void (ControlChange)> f)
+    {
+        onControlChange = f;
+    }
 
     /** SysEx callback.
       You can assign a lambda to this callback object to have it called when the
@@ -179,38 +188,66 @@ public:
       @param SysExByteArray
       @param SysExByteArraySize
     */
-    std::function<void (const uint8_t[], const uint8_t)> onSysEx;
+    void setOnSysExCallback (std::function<void (const uint8_t[], const uint8_t)> f)
+    {
+        onSysEx = f;
+    }
 
     /** SystemRealtime callback.
         @param byte SystemRealtime is 1byte message.      
     */
-    std::function<void (uint8_t byte)> onSystemRealtime;
+    void setOnSystemRealtimeCallback (std::function<void (uint8_t byte)> f)
+    {
+        onSystemRealtime = f;
+    }
 
     /** Program change callback.
         You can assign a lambda to this callback object to have it called when the
      MIDI Program change is come.
     */
-    std::function<void (ProgramChange)> onProgramChange;
+    void setOnProgramChange (std::function<void (ProgramChange)> f)
+    {
+        onProgramChange = f;
+    }
 
     /** Channel pressure callback.
         You can assign a lambda to this callback object to have it called when the
      MIDI Channel pressure is come.
     */
-    std::function<void (ChannelPressure)> onChannelPressure;
+    void setOnChannelPressure (std::function<void (ChannelPressure)> f)
+    {
+        onChannelPressure = f;
+    }
 
     /** Polyphonic key pressure callback.
         You can assign a lambda to this callback object to have it called when the
      MIDI Polyphonic key pressure is come.
     */
-    std::function<void (PolyphonicKeyPressure)> onPolyphonicKeyPressure;
+    void setOnPolyphonicKeyPressure (std::function<void (PolyphonicKeyPressure)> f)
+    {
+        onPolyphonicKeyPressure = f;
+    }
 
     /** Polyphonic key pressure callback.
         You can assign a lambda to this callback object to have it called when the
      MIDI Pitch bend is come.
     */
-    std::function<void (PitchBend)> onPitchBend;
+    void setOnPitchBend (std::function<void (PitchBend)> f)
+    {
+        onPitchBend = f;
+    }
 
 private:
+    std::function<void (Note)> onNoteOn;
+    std::function<void (Note)> onNoteOff;
+    std::function<void (ControlChange)> onControlChange;
+    std::function<void (const uint8_t[], const uint8_t)> onSysEx;
+    std::function<void (uint8_t byte)> onSystemRealtime;
+    std::function<void (ProgramChange)> onProgramChange;
+    std::function<void (ChannelPressure)> onChannelPressure;
+    std::function<void (PolyphonicKeyPressure)> onPolyphonicKeyPressure;
+    std::function<void (PitchBend)> onPitchBend;
+
     /** Extract MIDI channel from MIDI status byte.
         @param statusByte MIDI status byte
         @return constexpr uint8_t MIDI channel [0, 15]
