@@ -306,6 +306,6 @@ private:
     static constexpr uint8_t MAX_SYSEX_LENGTH = 32;
     bool receivingSysEx = false;
     uint8_t sysExIndex = 0;
-    std::array<uint8_t, MAX_SYSEX_LENGTH> sysExData;
+    std::array<uint8_t, MAX_SYSEX_LENGTH> sysExData {};
 };
 } // namespace pum
